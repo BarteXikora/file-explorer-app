@@ -1,9 +1,11 @@
 import AppTheme from './themes/AppTheme'
 
+import SideMenu from './components/layout/sideMenu/SideMenu'
+
 const App = () => {
   return (
     <AppTheme>
-      Hello, World!
+      <SideMenu />
     </AppTheme>
   )
 }
