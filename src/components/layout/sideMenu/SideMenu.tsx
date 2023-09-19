@@ -1,7 +1,7 @@
 import StyledSideMenu from './SideMenu.styles'
 import logo from '../../../assets/img/img-logo.png'
 
-import Button from '../../elements/Button'
+import Button from '../../elements/button/Button'
 
 import icon from '../../../assets/icons/icon-folder.png'
 
