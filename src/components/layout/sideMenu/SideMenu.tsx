@@ -1,8 +1,9 @@
 import StyledSideMenu from './SideMenu.styles'
 import logo from '../../../assets/img/img-logo.png'
 
-import ProjectSelectButton from '../../elements/projectSelectButton/ProjectSelectButton'
 import Button from '../../elements/button/Button'
+import ProjectSelectButton from '../../elements/projectSelectButton/ProjectSelectButton'
+import UsedSpace from '../../elements/usedSpace/UsedSpace'
 
 import iconFolder from '../../../assets/icons/icon-folder.png'
 import iconStar from '../../../assets/icons/icon-star.png'
@@ -42,7 +43,7 @@ const SideMenu = () => {
         </section>
 
         <section className='padding-bottom'>
-            <p>used space</p>
+            <UsedSpace currentValue='8.5 GB' wholeSpace='25 GB' percentage={34} />
         </section>
 
         <section>
