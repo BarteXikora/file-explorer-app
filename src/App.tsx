@@ -1,5 +1,11 @@
+import AppTheme from './themes/AppTheme'
+
 const App = () => {
-  return <>Hello, World!</>
+  return (
+    <AppTheme>
+      Hello, World!
+    </AppTheme>
+  )
 }
 
 export default App
