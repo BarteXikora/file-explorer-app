@@ -23,7 +23,7 @@ const defaultTheme = {
         sectionSmall: '25px',
         sectionBig: '35px',
 
-        YBig: '45px',
+        YBig: '35px',
         YNormal: '25px',
         YSmall: '10px',
 
