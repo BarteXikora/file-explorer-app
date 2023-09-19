@@ -8,6 +8,7 @@ const defaultTheme = {
 
         primary: '#623FEF',
         primaryDarker: '#2E2961',
+        primaryLighter: '#7F6AFF',
 
         correct: '#00FFB2',
         wrong: '#FF2E6D',
