@@ -6,10 +6,15 @@ const StyledSideMenu = styled.div`
     width: 300px;
     height: 100%;
     display: flex;
+    flex-direction: column;
+    padding: ${(props) => props.theme.margins.sectionSmall};
+    box-sizing: border-box;
 
     .logo {
         width: 180px;
         margin: 0 auto;
+        margin-bottom: ${(props) => props.theme.margins.YBig};
+        padding-right: 10px;
     }
 `
 

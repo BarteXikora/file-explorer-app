@@ -17,6 +17,18 @@ const defaultTheme = {
         title: '24px',
         default: '16px',
         small: '14px'
+    },
+    margins: {
+        sectionSmall: '25px',
+        sectionBig: '35px',
+
+        YBig: '45px',
+        YNormal: '25px',
+        YSmall: '10px',
+
+        XBig: '25px',
+        XNormal: '15px',
+        XSmall: '5px'
     }
 }
 
