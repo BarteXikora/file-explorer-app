@@ -4,21 +4,54 @@ import logo from '../../../assets/img/img-logo.png'
 import ProjectSelectButton from '../../elements/projectSelectButton/ProjectSelectButton'
 import Button from '../../elements/button/Button'
 
-import icon from '../../../assets/icons/icon-folder.png'
+import iconFolder from '../../../assets/icons/icon-folder.png'
+import iconStar from '../../../assets/icons/icon-star.png'
+import iconTrash from '../../../assets/icons/icon-trash.png'
+import iconManage from '../../../assets/icons/icon-manage-project.png'
 
 const SideMenu = () => {
     return <StyledSideMenu>
         <img src={logo} alt="logo multishare" className='logo' />
 
-        <ProjectSelectButton name='Moje pliki' />
+        <section className='padding-bottom'>
+            <h2>Projekt:</h2>
 
-        <br /><br />
+            <ProjectSelectButton name='Moje pliki' />
+        </section>
 
-        <Button>
-            <img src={icon} alt="" />
+        <section className='full-height'>
+            <h2>Menu:</h2>
 
-            Wszystkie pliki
-        </Button>
+            <Button variant='tertiary'>
+                <img src={iconFolder} alt="Wszystkie pliki" />
+
+                Wszystkie pliki
+            </Button>
+
+            <Button variant='tertiary'>
+                <img src={iconStar} alt="Oznaczone" />
+
+                Oznaczone
+            </Button>
+
+            <Button variant='tertiary'>
+                <img src={iconTrash} alt="Kosz" />
+
+                Kosz
+            </Button>
+        </section>
+
+        <section className='padding-bottom'>
+            <p>used space</p>
+        </section>
+
+        <section>
+            <Button variant='tertiary'>
+                <img src={iconManage} alt="Zarządzaj projektem" />
+
+                Zarządzaj projektem
+            </Button>
+        </section>
     </StyledSideMenu>
 }
 
