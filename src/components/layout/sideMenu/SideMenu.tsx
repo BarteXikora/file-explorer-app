@@ -1,5 +1,5 @@
 import StyledSideMenu from './SideMenu.styles'
-import logo from '../../../assets/img/img-logo.png'
+import Logo from '../../elements/logo/Logo'
 
 import Button from '../../elements/button/Button'
 import ProjectSelectButton from '../../elements/projectSelectButton/ProjectSelectButton'
@@ -12,7 +12,7 @@ import iconManage from '../../../assets/icons/icon-manage-project.png'
 
 const SideMenu = () => {
     return <StyledSideMenu>
-        <img src={logo} alt="logo multishare" className='logo' />
+        <Logo />
 
         <section className='padding-bottom'>
             <h2>Projekt:</h2>
