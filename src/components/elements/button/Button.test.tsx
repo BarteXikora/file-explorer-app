@@ -1,26 +1,25 @@
-import { render, screen } from '@testing-library/react'
+import { render, screen } from '../../../test-utils'
 import user from '@testing-library/user-event'
 
 import Button from './Button'
-import AppTheme from '../../../themes/AppTheme'
 import image from '../../../assets/icons/icon-folder.png'
 
 describe('Button', () => {
 
     test('renders correctly without any props', () => {
-        render(<Button></Button>, { wrapper: AppTheme })
+        render(<Button></Button>)
         const buttonElement = screen.getByRole('button')
         expect(buttonElement).toBeInTheDocument()
     })
 
     test('renders text inside', () => {
-        render(<Button>Test</Button>, { wrapper: AppTheme })
+        render(<Button>Test</Button>)
         const buttonElement = screen.getByRole('button')
         expect(buttonElement).toHaveTextContent('Test')
     })
 
     test('renders image inside', () => {
-        render(<Button><img src={image} alt="test" /></Button>, { wrapper: AppTheme })
+        render(<Button><img src={image} alt="test" /></Button>)
         const imageElement = screen.getByRole('img')
         expect(imageElement).toBeInTheDocument()
     })
@@ -32,7 +31,7 @@ describe('Button', () => {
             <Button variant='tertiary'></Button>
             <Button variant='menu'></Button>
 
-        </>, { wrapper: AppTheme })
+        </>)
 
         const buttonElement = screen.getAllByRole('button')
         expect(buttonElement).toHaveLength(4)
@@ -42,7 +41,7 @@ describe('Button', () => {
         user.setup()
         const onClickMock = jest.fn()
 
-        render(<Button onClick={onClickMock}></Button>, { wrapper: AppTheme })
+        render(<Button onClick={onClickMock}></Button>)
         const buttonElement = screen.getByRole('button')
 
         await user.click(buttonElement)
