@@ -7,7 +7,7 @@ type UsedSpaceProps = {
 }
 
 const UsedSpace = ({ currentValue, wholeSpace, percentage }: UsedSpaceProps) => {
-    return <StyledUsedSpace>
+    return <StyledUsedSpace role='button'>
         <h3>Aktualnie wykorzystane miejsce:</h3>
 
         <div className="progress-bar">

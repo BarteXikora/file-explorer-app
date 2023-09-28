@@ -1,7 +1,18 @@
 import styled from 'styled-components'
 
 const StyledUsedSpace = styled.div`
-    margin: 0 20px;
+    padding: 0 ${(props) => props.theme.margins.sectionSmall};
+    border-radius: ${(props) => props.theme.borderRadiuses.big};
+    transition: ${(props) => props.theme.transition};
+    cursor: pointer;
+
+    &:hover {
+        background-color: ${(props) => props.theme.colors.gray};
+    }
+
+    &:active {
+        background-color: ${(props) => props.theme.colors.grayDarker};
+    }
 
     h3 {
         font-size: ${(props) => props.theme.fontSizes.small};

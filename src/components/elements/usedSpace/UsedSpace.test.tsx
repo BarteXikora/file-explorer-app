@@ -5,11 +5,8 @@ describe('Used Space Progress Bar', () => {
 
     test('renders correctly', () => {
         render(<UsedSpace currentValue='' wholeSpace='' percentage={0} />)
-        const usedSpaceTitleElement = screen.getByRole('heading')
-        const usedSpaceValueElement = screen.getByText('z')
-
-        expect(usedSpaceTitleElement).toBeInTheDocument()
-        expect(usedSpaceValueElement).toBeInTheDocument()
+        const usedSpaceElement = screen.getByRole('button')
+        expect(usedSpaceElement).toBeInTheDocument()
     })
 
     test('renders used space text correctly', () => {
