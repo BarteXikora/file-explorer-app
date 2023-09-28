@@ -10,13 +10,6 @@ const StyledSideMenu = styled.nav`
     padding: ${(props) => props.theme.margins.sectionSmall};
     box-sizing: border-box;
 
-    .logo {
-        width: 180px;
-        margin: 0 auto;
-        margin-bottom: ${(props) => props.theme.margins.YBig};
-        padding-right: 10px;
-    }
-
     button {
         margin-bottom: ${(props) => props.theme.margins.YSmall};
     }

@@ -30,7 +30,12 @@ const defaultTheme = {
         XBig: '25px',
         XNormal: '15px',
         XSmall: '5px'
-    }
+    },
+    borderRadiuses: {
+        big: '10px',
+        small: '5px'
+    },
+    transition: 'all .2s ease-in-out'
 }
 
 export default defaultTheme
