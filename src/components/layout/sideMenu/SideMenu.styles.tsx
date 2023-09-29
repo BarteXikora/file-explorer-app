@@ -1,6 +1,7 @@
 import styled from 'styled-components'
 
 const StyledSideMenu = styled.nav`
+    position: fixed;
     background-color: ${(props) => props.theme.colors.black};
     color: ${(props) => props.theme.colors.white};
     width: 300px;

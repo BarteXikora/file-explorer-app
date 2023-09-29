@@ -21,7 +21,7 @@ const defaultTheme = {
     },
     margins: {
         sectionSmall: '25px',
-        sectionBig: '35px',
+        sectionBig: '25px 35px',
 
         YBig: '35px',
         YNormal: '25px',
