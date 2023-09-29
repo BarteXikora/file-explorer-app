@@ -1,6 +1,7 @@
 import StyledTopBar from './TopBar.styled'
 
 import Button from '../../elements/button/Button'
+import UserButton from '../../elements/userButton/UserButton'
 
 import iconFilter from '../../../assets/icons/icon-filter.png'
 import iconSort from '../../../assets/icons/icon-sort.png'
@@ -38,7 +39,7 @@ const TopBar = () => {
                 Pomoc...
             </Button>
 
-            <div>konto</div>
+            <UserButton />
         </div>
 
     </StyledTopBar>
