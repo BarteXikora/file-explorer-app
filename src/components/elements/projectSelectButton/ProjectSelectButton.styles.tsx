@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import StyledButton from '../button/Button.styles'
+import StyledButton from '../../ui/button/Button.styles'
 
 const StyledProjectSelectButton = styled(StyledButton)`
     position: relative;

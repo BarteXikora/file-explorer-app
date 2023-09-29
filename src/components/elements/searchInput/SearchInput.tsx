@@ -1,5 +1,5 @@
 import StyledSearchInput from './SearchInput.styles'
-import Button from '../button/Button'
+import Button from '../../ui/button/Button'
 import iconSearch from '../../../assets/icons/icon-search.png'
 
 const SearchInput = () => {
