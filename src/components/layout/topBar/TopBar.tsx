@@ -10,7 +10,7 @@ import iconDisplay from '../../../assets/icons/icon-display.png'
 import iconHelp from '../../../assets/icons/icon-help.png'
 
 const TopBar = () => {
-    return <StyledTopBar>
+    return <StyledTopBar data-testid='top-bar'>
         <div className='full-width'>
             <SearchInput />
 
