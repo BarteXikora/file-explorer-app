@@ -1,5 +1,8 @@
+import { useState } from 'react'
+
 import StyledHeader from './Header.styles'
 import Button from '../../elements/button/Button'
+import Checkbox from '../../elements/checkbox/Checkbox'
 
 import iconUpload from '../../../assets/icons/icon-upload.png'
 import iconNewFolder from '../../../assets/icons/icon-new-folder.png'
@@ -14,6 +17,8 @@ type __currentPathProps = string[]
 const __curentPath: __currentPathProps = ['Moje pliki', 'Prywatne', 'Obrazy', 'Wycieczka sierpień 2023']
 
 const Header = () => {
+    const [__allSelected, __setAllSelected] = useState(false)
+
     return <StyledHeader>
         <div className="path-box">
             <span>Ścieżka:</span>
@@ -29,11 +34,7 @@ const Header = () => {
         </div>
 
         <div className="functions-box">
-            <label>
-                <input type="checkbox" />
-
-                Zaznacz wszystko
-            </label>
+            <Checkbox isChecked={__allSelected} setIsChecked={__setAllSelected} label='Zaznacz wszystko' />
 
             <span className="separator" />
 
