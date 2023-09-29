@@ -1,7 +1,7 @@
 import StyledSideMenu from './SideMenu.styles'
 import Logo from '../../elements/logo/Logo'
 
-import Button from '../../elements/button/Button'
+import Button from '../../ui/button/Button'
 import ProjectSelectButton from '../../elements/projectSelectButton/ProjectSelectButton'
 import UsedSpace from '../../elements/usedSpace/UsedSpace'
 

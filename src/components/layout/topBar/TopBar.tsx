@@ -1,6 +1,6 @@
 import StyledTopBar from './TopBar.styled'
 
-import Button from '../../elements/button/Button'
+import Button from '../../ui/button/Button'
 import SearchInput from '../../elements/searchInput/SearchInput'
 import UserButton from '../../elements/userButton/UserButton'
 

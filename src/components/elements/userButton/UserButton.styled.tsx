@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import Button from '../button/Button'
+import Button from '../../ui/button/Button'
 
 const StyledUserButton = styled(Button)`
     padding: 0;

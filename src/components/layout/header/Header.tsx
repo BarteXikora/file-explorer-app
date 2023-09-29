@@ -1,8 +1,8 @@
 import { useState } from 'react'
 
 import StyledHeader from './Header.styles'
-import Button from '../../elements/button/Button'
-import Checkbox from '../../elements/checkbox/Checkbox'
+import Button from '../../ui/button/Button'
+import Checkbox from '../../ui/checkbox/Checkbox'
 
 import iconUpload from '../../../assets/icons/icon-upload.png'
 import iconNewFolder from '../../../assets/icons/icon-new-folder.png'
