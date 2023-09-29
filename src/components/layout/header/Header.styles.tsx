@@ -7,6 +7,7 @@ const StyledHeader = styled.header`
     .path-box {
         padding: ${(props) => props.theme.margins.YSmall} 0;
         padding-left: 25px;
+        margin-bottom: ${(props) => props.theme.margins.YNormal};
         position: relative;
         font-weight: bold;
 
@@ -54,6 +55,27 @@ const StyledHeader = styled.header`
                 border-right: 2px solid ${(props) => props.theme.colors.white};
                 border-radius: 0 4px 0 0;
             }
+        }
+    }
+
+    .functions-box {
+        display: flex;
+        gap: ${(props) => props.theme.margins.XNormal};
+        align-items: center;
+    }
+
+    .separator {
+        margin: 0 ${(props) => props.theme.margins.XNormal};
+        height: 25px;
+        border: 1px solid ${(props) => props.theme.colors.white};
+    }
+
+    .selected-operations {
+        display: flex;
+        align-items: center;
+
+        .separator {
+            margin-right: ${(props) => props.theme.margins.XNormal};
         }
     }
 `
