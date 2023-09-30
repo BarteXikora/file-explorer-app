@@ -7,11 +7,15 @@ type FoldersSectionProps = {
 
 const FoldersSection = ({ content }: FoldersSectionProps) => {
     return <StyledFoldersSection>
-        {
-            content.map((folder, n) => {
-                return <Folder name={folder.name} star={folder.star} />
-            })
-        }
+        <h2>Foldery:</h2>
+
+        <div className="content">
+            {
+                content.map((folder, n) => {
+                    return <Folder name={folder.name} star={folder.star} />
+                })
+            }
+        </div>
     </StyledFoldersSection>
 }
 
