@@ -1,5 +1,6 @@
 import StyledContentSection from './ContentSection.styles'
 import FoldersSection from '../foldersSection/FoldersSection'
+import FilesSection from '../filesSection/FilesSection'
 
 const __content = {
     folders: [
@@ -16,6 +17,8 @@ const __content = {
 const ContentSection = () => {
     return <StyledContentSection>
         {__content.folders.length > 0 && <FoldersSection content={__content.folders} />}
+
+        {__content.files.length > 0 && <FilesSection content={__content.files} />}
     </StyledContentSection>
 }
 

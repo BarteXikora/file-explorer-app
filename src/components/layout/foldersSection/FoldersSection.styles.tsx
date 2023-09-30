@@ -1,6 +1,8 @@
 import styled from 'styled-components'
 
 const StyledFoldersSection = styled.div`
+    margin-bottom: ${(props) => props.theme.margins.YBig};
+
     h2 {
         font-size: ${(props) => props.theme.fontSizes.default};
         padding-left: ${(props) => props.theme.margins.XNormal};
