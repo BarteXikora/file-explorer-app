@@ -9,7 +9,6 @@ const StyledFolder = styled.div`
     padding-right: 0;
     white-space: nowrap;
     border-radius: 1000px;
-    overflow: hidden;
     transition: ${(props) => props.theme.transition};
     cursor: pointer;
 
@@ -30,10 +29,15 @@ const StyledFolder = styled.div`
         right: 0;
         z-index: 0;
         transition: ${(props) => props.theme.transition};
+        border-radius: 1000px;
     }
 
     img {
         margin-right: ${(props) => props.theme.margins.XSmall};
+    }
+
+    .name {
+        overflow: hidden;
     }
 
     button {
@@ -43,6 +47,13 @@ const StyledFolder = styled.div`
         margin-left: auto;
         right: 0;
         z-index: 10;
+    }
+
+    .star {
+        position: absolute;
+        z-index: 100;
+        top: -18px;
+        right: 35px;
     }
 `
 export default StyledFolder
