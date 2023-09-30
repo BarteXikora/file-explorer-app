@@ -1,8 +1,18 @@
 import StyledContentSection from './ContentSection.styles'
-import FoldersSection from '../foldersSection/FoldersSection'
-import FilesSection from '../filesSection/FilesSection'
+import Folder from '../../elements/folder/Folder'
 
-const __content = {
+type __contentProps = {
+    folders: {
+        name: string
+        star?: boolean
+    }[],
+    files: {
+        name: string
+        extension: string
+    }[]
+}
+
+const __content: __contentProps = {
     folders: [
         { name: 'Nieobrobione' }, { name: 'Pozostałe - większść do śmieci', star: true }
     ],
@@ -16,9 +26,37 @@ const __content = {
 
 const ContentSection = () => {
     return <StyledContentSection>
-        {__content.folders.length > 0 && <FoldersSection content={__content.folders} />}
 
-        {__content.files.length > 0 && <FilesSection content={__content.files} />}
+        {__content.folders.length > 0 && (
+            <section>
+                <h2>Foldery:</h2>
+
+                <div className="content">
+                    {
+                        __content.folders.map((folder, n) => {
+                            return <Folder name={folder.name} star={folder.star} />
+                        })
+                    }
+                </div>
+            </section>
+        )}
+
+        {__content.files.length > 0 && (
+            <section>
+                <h2>Pliki:</h2>
+
+                <div className="content">
+                    {
+                        __content.files.map((folder, n) => {
+                            return <>file</>
+                        })
+                    }
+                </div>
+            </section>
+        )}
+
+        {(__content.folders.length === 0 && __content.files.length === 0) && <>folder jest pusty</>}
+
     </StyledContentSection>
 }
 
