@@ -5,6 +5,7 @@ import SideMenu from './components/layout/sideMenu/SideMenu'
 import MainBody from './components/layout/mainBody/MainBody'
 import TopBar from './components/layout/topBar/TopBar'
 import Header from './components/layout/header/Header'
+import ContentSection from './components/layout/contentSection/ContentSection'
 
 const App = () => {
   return (
@@ -15,6 +16,8 @@ const App = () => {
         <TopBar />
 
         <Header />
+
+        <ContentSection />
       </MainBody>
     </AppTheme>
   )
