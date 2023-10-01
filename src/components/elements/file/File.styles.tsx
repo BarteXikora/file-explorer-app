@@ -75,6 +75,7 @@ const StyledFile = styled.div`
             right: 0;
             z-index: 0;
             transition: ${(props) => props.theme.transition};
+            border-radius: ${(props) => props.theme.borderRadiuses.big};
         }
     }
 `
