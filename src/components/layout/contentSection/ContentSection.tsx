@@ -4,7 +4,6 @@ import File from '../../elements/file/File'
 
 import photo0 from '../../../assets/__files/photo0.png'
 import photo1 from '../../../assets/__files/photo1.png'
-import photo2 from '../../../assets/__files/photo2.png'
 import photo3 from '../../../assets/__files/photo3.png'
 
 type __contentProps = {
@@ -35,11 +34,13 @@ const __content: __contentProps = {
         }, {
             name: 'Wycieczka na rowery 3',
             extension: 'PNG',
-            preview: photo2
         }, {
             name: 'Wycieczka na rowery 4',
             extension: 'JPG',
             preview: photo3
+        }, {
+            name: 'info',
+            extension: 'TXT'
         }
     ]
 }

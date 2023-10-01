@@ -9,8 +9,8 @@ const StyledFile = styled.div`
     &:hover {
         background-color: ${(props) => props.theme.colors.grayLighter};
 
-        .preview {
-            background-size: auto 110%
+        .preview-image {
+            background-size: auto 110% !important;
         }
 
         .label::after {
@@ -22,10 +22,14 @@ const StyledFile = styled.div`
         position: relative;
         aspect-ratio: 2 / 1;
         background-position: center;
-        background-size: auto 100%;
+        background-size: auto 85%;
         background-repeat: no-repeat;
         border-radius: ${(props) => props.theme.borderRadiuses.big} ${(props) => props.theme.borderRadiuses.big} 0 0;
         transition: ${(props) => props.theme.transition};
+
+        &.preview-image {
+            background-size: auto 100%;
+        }
     }
 
     .extension {
