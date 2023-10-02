@@ -2,6 +2,7 @@ import styled from 'styled-components'
 
 const StyledContentSection = styled.main`
     padding: ${(props) => props.theme.margins.sectionBig};
+    padding-bottom: calc(${(props) => props.theme.margins.big} * 2.5);
 
     section {
         margin-bottom: ${(props) => props.theme.margins.big};
