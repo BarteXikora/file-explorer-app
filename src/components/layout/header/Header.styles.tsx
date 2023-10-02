@@ -3,6 +3,7 @@ import styled from 'styled-components'
 const StyledHeader = styled.header`
     background-color: ${(props) => props.theme.colors.gray};
     padding: ${(props) => props.theme.margins.sectionBig};
+    padding-top: calc(${(props) => props.theme.margins.medium} + 98px);
 
     .functions-box {
         display: flex;

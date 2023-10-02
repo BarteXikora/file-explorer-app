@@ -20,7 +20,28 @@ type __contentProps = {
 
 const __content: __contentProps = {
     folders: [
-        { name: 'Nieobrobione' }, { name: 'Pozostałe - większść do śmieci', star: true }
+        { name: 'Nieobrobione' }, { name: 'Pozostałe - większść do śmieci', star: true },
+        { name: 'Nieobrobione' }, { name: 'Pozostałe - większść do śmieci', star: true },
+        { name: 'Nieobrobione' }, { name: 'Pozostałe - większść do śmieci', star: true },
+        { name: 'Nieobrobione' }, { name: 'Pozostałe - większść do śmieci', star: true },
+        { name: 'Nieobrobione' }, { name: 'Pozostałe - większść do śmieci', star: true },
+        { name: 'Nieobrobione' }, { name: 'Pozostałe - większść do śmieci', star: true },
+        { name: 'Nieobrobione' }, { name: 'Pozostałe - większść do śmieci', star: true },
+        { name: 'Nieobrobione' }, { name: 'Pozostałe - większść do śmieci', star: true },
+        { name: 'Nieobrobione' }, { name: 'Pozostałe - większść do śmieci', star: true },
+        { name: 'Nieobrobione' }, { name: 'Pozostałe - większść do śmieci', star: true },
+        { name: 'Nieobrobione' }, { name: 'Pozostałe - większść do śmieci', star: true },
+        { name: 'Nieobrobione' }, { name: 'Pozostałe - większść do śmieci', star: true },
+        { name: 'Nieobrobione' }, { name: 'Pozostałe - większść do śmieci', star: true },
+        { name: 'Nieobrobione' }, { name: 'Pozostałe - większść do śmieci', star: true },
+        { name: 'Nieobrobione' }, { name: 'Pozostałe - większść do śmieci', star: true },
+        { name: 'Nieobrobione' }, { name: 'Pozostałe - większść do śmieci', star: true },
+        { name: 'Nieobrobione' }, { name: 'Pozostałe - większść do śmieci', star: true },
+        { name: 'Nieobrobione' }, { name: 'Pozostałe - większść do śmieci', star: true },
+        { name: 'Nieobrobione' }, { name: 'Pozostałe - większść do śmieci', star: true },
+        { name: 'Nieobrobione' }, { name: 'Pozostałe - większść do śmieci', star: true },
+        { name: 'Nieobrobione' }, { name: 'Pozostałe - większść do śmieci', star: true },
+        { name: 'Nieobrobione' }, { name: 'Pozostałe - większść do śmieci', star: true },
     ],
     files: [
         {

@@ -5,7 +5,6 @@ const GlobalStyles = createGlobalStyle`
 
     html, body, #root {
         height: 100%;
-        overflow: hidden;
         margin: 0;
         padding: 0;
         font-family: 'Mukta', sans-serif;

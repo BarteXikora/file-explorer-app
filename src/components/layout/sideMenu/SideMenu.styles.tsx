@@ -10,6 +10,7 @@ const StyledSideMenu = styled.nav`
     flex-direction: column;
     padding: ${(props) => props.theme.margins.medium};
     box-sizing: border-box;
+    z-index: 1100;
 
     button:not(:last-of-type) {
         margin-bottom: ${(props) => props.theme.margins.small};
