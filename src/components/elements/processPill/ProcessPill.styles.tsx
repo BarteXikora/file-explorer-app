@@ -14,6 +14,7 @@ const StyledProcessPill = styled.div`
     cursor: pointer;
     transition: ${(props) => props.theme.transition};
     border: 1px solid ${(props) => props.theme.colors.black};
+    z-index: 1000;
 
     &:hover {
         border-color: ${(props) => props.theme.colors.white};
