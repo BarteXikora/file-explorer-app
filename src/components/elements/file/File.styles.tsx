@@ -34,12 +34,12 @@ const StyledFile = styled.div`
 
     .extension {
         position: absolute;
-        top: ${(props) => props.theme.margins.YSmall};
-        right: ${(props) => props.theme.margins.XNormal};
+        top: ${(props) => props.theme.margins.small};
+        right: ${(props) => props.theme.margins.small};
         background-color: ${(props) => props.theme.colors.black};
         color: ${(props) => props.theme.colors.white};
         border: 2px solid ${(props) => props.theme.colors.white};
-        padding: 0 ${(props) => props.theme.margins.XNormal};
+        padding: ${(props) => props.theme.margins.sectionSmall};
         border-radius: 1000px;
         font-weight: bold;
     }
@@ -48,7 +48,7 @@ const StyledFile = styled.div`
         position: relative;
         display: flex;
         align-items: center;
-        padding: ${(props) => props.theme.margins.YSmall} ${(props) => props.theme.margins.XNormal};
+        padding: ${(props) => props.theme.margins.sectionMedium};
         padding-right: 0;
 
         span {
@@ -58,7 +58,7 @@ const StyledFile = styled.div`
 
         button {
             position: absolute;
-            padding: ${(props) => props.theme.margins.YSmall};
+            padding: ${(props) => props.theme.margins.sectionSmall};
             height: 100%;
             margin-left: auto;
             right: 0;

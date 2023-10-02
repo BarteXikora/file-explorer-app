@@ -2,13 +2,12 @@ import styled from 'styled-components'
 
 const StyledTopBar = styled.section`
     display: flex;
-    gap: ${(props) => props.theme.margins.XNormal};
-    padding: 0 ${(props) => props.theme.margins.XBig};
-    margin-bottom: ${(props) => props.theme.margins.YNormal};
+    padding: 0 ${(props) => props.theme.margins.big};
+    margin-bottom: ${(props) => props.theme.margins.medium};
 
     div {
         display: flex;
-        gap: ${(props) => props.theme.margins.XNormal};
+        gap: ${(props) => props.theme.margins.small};
     }
 
     .full-width {

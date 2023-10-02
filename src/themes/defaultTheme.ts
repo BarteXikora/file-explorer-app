@@ -20,16 +20,18 @@ const defaultTheme = {
         small: '13px'
     },
     margins: {
-        sectionSmall: '25px',
-        sectionBig: '25px 35px',
+        sectionBig: '26px 36px',
+        sectionMedium: '13px 26px',
+        sectionSmall: '3px 13px',
 
-        YBig: '35px',
-        YNormal: '25px',
-        YSmall: '10px',
+        sectionBigImg: '20px 36px',
+        sectionMediumImg: '9px 13px',
+        sectionSmallImg: '3px 13px',
 
-        XBig: '25px',
-        XNormal: '15px',
-        XSmall: '5px'
+        big: '36px',
+        medium: '26px',
+        small: '13px',
+        xsmall: '3px'
     },
     borderRadiuses: {
         big: '10px',

@@ -6,12 +6,12 @@ const StyledHeader = styled.header`
 
     .functions-box {
         display: flex;
-        gap: ${(props) => props.theme.margins.XNormal};
+        gap: ${(props) => props.theme.margins.small};
         align-items: center;
     }
 
     .separator {
-        margin: 0 ${(props) => props.theme.margins.XNormal};
+        margin: 0 ${(props) => props.theme.margins.small};
         height: 25px;
         border: 1px solid ${(props) => props.theme.colors.white};
     }
@@ -21,7 +21,7 @@ const StyledHeader = styled.header`
         align-items: center;
 
         .separator {
-            margin-right: ${(props) => props.theme.margins.XNormal};
+            margin-right: ${(props) => props.theme.margins.medium};
         }
     }
 `

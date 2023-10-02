@@ -15,7 +15,7 @@ const StyledButton = styled.button<StyledButtonProps>`
             props.theme.colors.primary
     };
 
-    padding: ${(props) => props.size === 'small' ? '8px 18px' : '9px 20px'};
+    padding: ${(props) => props.size === 'small' ? props.theme.margins.sectionSmallImg : props.theme.margins.sectionMediumImg};
 
     border: 1px solid ${(props) => (props.variant === 'tertiary' || props.variant === 'menu') ?
         'transparent'

@@ -15,7 +15,7 @@ const StyledSearchInput = styled.form`
         border-radius: 1000px 0 0 1000px;
         background-color: transparent;
         border: none;
-        padding: 0 ${(props) => props.theme.margins.XNormal};
+        padding: 0 ${(props) => props.theme.margins.medium};
         font-size: ${(props) => props.theme.fontSizes.default};
         color: ${(props) => props.theme.colors.white};
 

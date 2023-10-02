@@ -1,9 +1,9 @@
 import styled from 'styled-components'
 
 const StyledPath = styled.div`
-    padding: ${(props) => props.theme.margins.YSmall} 0;
+    padding: ${(props) => props.theme.margins.small} 0;
     padding-left: 25px;
-    margin-bottom: ${(props) => props.theme.margins.YNormal};
+    margin-bottom: ${(props) => props.theme.margins.medium};
     position: relative;
     font-weight: bold;
 
