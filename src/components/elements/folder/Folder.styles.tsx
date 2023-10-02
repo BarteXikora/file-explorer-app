@@ -8,7 +8,7 @@ const StyledFolder = styled.div`
     padding: ${(props) => props.theme.margins.sectionMediumImg};
     padding-right: 0;
     white-space: nowrap;
-    border-radius: 1000px;
+    border-radius: ${(props) => props.theme.borderRadiuses.pill};
     transition: ${(props) => props.theme.transition};
     cursor: pointer;
 
@@ -29,7 +29,7 @@ const StyledFolder = styled.div`
         right: 0;
         z-index: 0;
         transition: ${(props) => props.theme.transition};
-        border-radius: 1000px;
+        border-radius: ${(props) => props.theme.borderRadiuses.pill};
     }
 
     img {
@@ -47,6 +47,7 @@ const StyledFolder = styled.div`
         margin-left: auto;
         right: 0;
         z-index: 10;
+        border-radius: 0 ${(props) => props.theme.borderRadiuses.pill} ${(props) => props.theme.borderRadiuses.pill} 0;
 
         img {
             margin: 0;

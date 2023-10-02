@@ -6,7 +6,7 @@ const StyledProcessPill = styled.div`
     left: calc(${(props) => props.theme.margins.big} + 300px);
     padding: ${(props) => props.theme.margins.sectionMedium};
     background-color: ${(props) => props.theme.colors.black};
-    border-radius: 1000px;
+    border-radius: ${(props) => props.theme.borderRadiuses.pill};
     color: ${(props) => props.theme.colors.grayLighter};
     display: flex;
     align-items: center;

@@ -29,14 +29,14 @@ const StyledUsedSpace = styled.div`
         width: 100%;
         height: 8px;
         background-color: ${(props) => props.theme.colors.white};
-        border-radius: 100px;
+        border-radius: ${(props) => props.theme.borderRadiuses.pill};
     }
 
     .current-progress {
         height: 100%;
         max-width: 100%;
         background-color: ${(props) => props.theme.colors.primary};
-        border-radius: 100px;
+        border-radius: ${(props) => props.theme.borderRadiuses.pill};
     }
 `
 

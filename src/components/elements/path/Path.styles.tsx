@@ -15,7 +15,7 @@ const StyledPath = styled.div`
         background-color: ${(props) => props.theme.colors.primary};
         top: 0;
         left: 0;
-        border-radius: 1000px;
+        border-radius: ${(props) => props.theme.borderRadiuses.pill};
     }
 
     h1 {
@@ -49,7 +49,7 @@ const StyledPath = styled.div`
            transform: rotateZ(45deg);
            border-top: 2px solid ${(props) => props.theme.colors.white};
            border-right: 2px solid ${(props) => props.theme.colors.white};
-           border-radius: 0 4px 0 0;
+           border-radius: 0 ${(props) => props.theme.borderRadiuses.small} 0 0;
        }
    }
 `

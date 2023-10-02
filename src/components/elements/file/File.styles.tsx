@@ -40,7 +40,7 @@ const StyledFile = styled.div`
         color: ${(props) => props.theme.colors.white};
         border: 2px solid ${(props) => props.theme.colors.white};
         padding: ${(props) => props.theme.margins.sectionSmall};
-        border-radius: 1000px;
+        border-radius: ${(props) => props.theme.borderRadiuses.pill};
         font-weight: bold;
     }
 
@@ -63,7 +63,7 @@ const StyledFile = styled.div`
             margin-left: auto;
             right: 0;
             z-index: 10;
-            border-radius: ${(props) => props.theme.borderRadiuses.big};
+            border-radius: 0 0 ${(props) => props.theme.borderRadiuses.big} 0;
         }
 
         &::after {
@@ -75,7 +75,7 @@ const StyledFile = styled.div`
             right: 0;
             z-index: 0;
             transition: ${(props) => props.theme.transition};
-            border-radius: ${(props) => props.theme.borderRadiuses.big};
+            border-radius: 0 0 ${(props) => props.theme.borderRadiuses.big} 0;
         }
     }
 `

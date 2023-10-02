@@ -34,8 +34,9 @@ const defaultTheme = {
         xsmall: '3px'
     },
     borderRadiuses: {
-        big: '10px',
-        small: '5px'
+        pill: '100vw',
+        big: '13px',
+        small: '3px'
     },
     transition: 'all .2s ease-in-out'
 }

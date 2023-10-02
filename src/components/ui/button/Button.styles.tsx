@@ -23,7 +23,7 @@ const StyledButton = styled.button<StyledButtonProps>`
         props.theme.colors.white
     };
 
-    border-radius: 100px;
+    border-radius: ${(props) => props.theme.borderRadiuses.pill};
     color: ${(props) => props.theme.colors.white};
     font-size: ${(props) => props.theme.fontSizes.default};
     text-align: left;
