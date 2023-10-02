@@ -15,9 +15,9 @@ const defaultTheme = {
         accent: '#FFC700'
     },
     fontSizes: {
-        title: '24px',
-        default: '16px',
-        small: '14px'
+        title: '23px',
+        default: '15px',
+        small: '13px'
     },
     margins: {
         sectionSmall: '25px',
