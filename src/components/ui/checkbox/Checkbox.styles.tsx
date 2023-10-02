@@ -2,7 +2,7 @@ import styled from 'styled-components'
 
 const StyledCheckbox = styled.div`
     display: flex;
-    gap: ${(props) => props.theme.margins.XNormal};
+    gap: ${(props) => props.theme.margins.small};
     cursor: pointer;
 
     label {

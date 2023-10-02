@@ -21,7 +21,7 @@ const StyledProjectSelectButton = styled(StyledButton)`
         transform: rotateZ(45deg);
         border-top: 2px solid ${(props) => props.theme.colors.white};
         border-right: 2px solid ${(props) => props.theme.colors.white};
-        border-radius: 0 4px 0 0;
+        border-radius: 0 ${(props) => props.theme.borderRadiuses.small} 0 0;
     }
 
     .project-picture {

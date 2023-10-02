@@ -15,25 +15,28 @@ const defaultTheme = {
         accent: '#FFC700'
     },
     fontSizes: {
-        title: '24px',
-        default: '16px',
-        small: '14px'
+        title: '23px',
+        default: '15px',
+        small: '13px'
     },
     margins: {
-        sectionSmall: '25px',
-        sectionBig: '25px 35px',
+        sectionBig: '26px 36px',
+        sectionMedium: '13px 26px',
+        sectionSmall: '3px 13px',
 
-        YBig: '35px',
-        YNormal: '25px',
-        YSmall: '10px',
+        sectionBigImg: '20px 36px',
+        sectionMediumImg: '9px 13px',
+        sectionSmallImg: '3px 13px',
 
-        XBig: '25px',
-        XNormal: '15px',
-        XSmall: '5px'
+        big: '36px',
+        medium: '26px',
+        small: '13px',
+        xsmall: '3px'
     },
     borderRadiuses: {
-        big: '10px',
-        small: '5px'
+        pill: '100vw',
+        big: '13px',
+        small: '3px'
     },
     transition: 'all .2s ease-in-out'
 }

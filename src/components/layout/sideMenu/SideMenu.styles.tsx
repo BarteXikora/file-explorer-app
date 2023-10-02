@@ -8,18 +8,19 @@ const StyledSideMenu = styled.nav`
     height: 100%;
     display: flex;
     flex-direction: column;
-    padding: ${(props) => props.theme.margins.sectionSmall};
+    padding: ${(props) => props.theme.margins.medium};
     box-sizing: border-box;
+    z-index: 1100;
 
-    button {
-        margin-bottom: ${(props) => props.theme.margins.YSmall};
+    button:not(:last-of-type) {
+        margin-bottom: ${(props) => props.theme.margins.small};
     }
 
     h2 {
         font-size: ${(props) => props.theme.fontSizes.default};
         font-weight: bold;
         padding-left: 12px;
-        margin-bottom: ${(props) => props.theme.margins.YSmall};
+        margin-bottom: ${(props) => props.theme.margins.small};
     }
 
     section {
@@ -27,7 +28,7 @@ const StyledSideMenu = styled.nav`
         flex-direction: column;
 
         &.padding-bottom {
-            padding-bottom: ${(props) => props.theme.margins.YBig};;
+            padding-bottom: ${(props) => props.theme.margins.big};
         }
 
         &.full-height {

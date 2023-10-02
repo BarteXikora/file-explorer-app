@@ -5,10 +5,10 @@ const StyledFolder = styled.div`
     display: flex;
     align-items: center;
     background-color: ${(props) => props.theme.colors.gray};
-    padding: ${(props) => props.theme.margins.YSmall} ${(props) => props.theme.margins.XNormal};
+    padding: ${(props) => props.theme.margins.sectionMediumImg};
     padding-right: 0;
     white-space: nowrap;
-    border-radius: 1000px;
+    border-radius: ${(props) => props.theme.borderRadiuses.pill};
     transition: ${(props) => props.theme.transition};
     cursor: pointer;
 
@@ -29,11 +29,11 @@ const StyledFolder = styled.div`
         right: 0;
         z-index: 0;
         transition: ${(props) => props.theme.transition};
-        border-radius: 1000px;
+        border-radius: ${(props) => props.theme.borderRadiuses.pill};
     }
 
     img {
-        margin-right: ${(props) => props.theme.margins.XSmall};
+        margin-right: ${(props) => props.theme.margins.small};
     }
 
     .name {
@@ -42,11 +42,16 @@ const StyledFolder = styled.div`
 
     button {
         position: absolute;
-        padding: ${(props) => props.theme.margins.YSmall};
+        padding: ${(props) => props.theme.margins.small};
         height: 100%;
         margin-left: auto;
         right: 0;
         z-index: 10;
+        border-radius: 0 ${(props) => props.theme.borderRadiuses.pill} ${(props) => props.theme.borderRadiuses.pill} 0;
+
+        img {
+            margin: 0;
+        }
     }
 
     .star {

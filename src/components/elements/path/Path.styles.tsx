@@ -1,9 +1,9 @@
 import styled from 'styled-components'
 
 const StyledPath = styled.div`
-    padding: ${(props) => props.theme.margins.YSmall} 0;
+    padding: ${(props) => props.theme.margins.small} 0;
     padding-left: 25px;
-    margin-bottom: ${(props) => props.theme.margins.YNormal};
+    margin-bottom: ${(props) => props.theme.margins.medium};
     position: relative;
     font-weight: bold;
 
@@ -15,7 +15,7 @@ const StyledPath = styled.div`
         background-color: ${(props) => props.theme.colors.primary};
         top: 0;
         left: 0;
-        border-radius: 1000px;
+        border-radius: ${(props) => props.theme.borderRadiuses.pill};
     }
 
     h1 {
@@ -49,7 +49,7 @@ const StyledPath = styled.div`
            transform: rotateZ(45deg);
            border-top: 2px solid ${(props) => props.theme.colors.white};
            border-right: 2px solid ${(props) => props.theme.colors.white};
-           border-radius: 0 4px 0 0;
+           border-radius: 0 ${(props) => props.theme.borderRadiuses.small} 0 0;
        }
    }
 `
