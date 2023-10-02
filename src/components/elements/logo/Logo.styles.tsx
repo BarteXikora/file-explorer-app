@@ -4,6 +4,7 @@ const StyledLogo = styled.a`
     display: block;
     text-align: center;
     margin-bottom: ${(props) => props.theme.margins.big};
+    padding: ${(props) => props.theme.margins.sectionSmall};
     border-radius: ${(props) => props.theme.borderRadiuses.big};
     cursor: pointer;
     transition: ${(props) => props.theme.transition};
