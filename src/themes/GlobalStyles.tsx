@@ -13,6 +13,22 @@ const GlobalStyles = createGlobalStyle`
         color: ${(props) => props.theme.colors.white};
     }
 
+    ::-webkit-scrollbar {
+        width: 8px;
+    }
+
+    ::-webkit-scrollbar-track {
+        background: ${(props) => props.theme.colors.black};
+    }
+
+    ::-webkit-scrollbar-thumb {
+        background: ${(props) => props.theme.colors.grayLighter};
+        border-radius: ${(props) => props.theme.borderRadiuses.pill};
+
+        &:hover {
+            background-color: ${(props) => props.theme.colors.primary};
+        }
+    }
 `
 
 export default GlobalStyles
