@@ -41,7 +41,7 @@ const defaultTheme = {
     transition: 'all .2s ease-in-out',
     screenSizes: {
         big: '1250px',
-        medium: '800px',
+        medium: '950px',
         small: '560px'
     }
 }
