@@ -77,6 +77,13 @@ const StyledFile = styled.div`
             transition: ${(props) => props.theme.transition};
             border-radius: 0 0 ${(props) => props.theme.borderRadiuses.big} 0;
         }
+
+        .star {
+            position: absolute;
+            z-index: 100;
+            top: -18px;
+            right: 35px;
+        }
     }
 `
 
