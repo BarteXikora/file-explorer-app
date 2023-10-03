@@ -38,7 +38,12 @@ const defaultTheme = {
         big: '13px',
         small: '3px'
     },
-    transition: 'all .2s ease-in-out'
+    transition: 'all .2s ease-in-out',
+    screenSizes: {
+        big: '1250px',
+        medium: '800px',
+        small: '560px'
+    }
 }
 
 export default defaultTheme
