@@ -20,6 +20,10 @@ const StyledTopBar = styled.section`
     .full-width {
         width: 100%;
     }
+
+    @media (max-width: ${(props) => props.theme.screenSizes.big}) {
+        padding-left: ${(props) => props.theme.margins.big};
+    }
 `
 
 export default StyledTopBar

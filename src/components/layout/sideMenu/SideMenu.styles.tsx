@@ -11,6 +11,7 @@ const StyledSideMenu = styled.nav`
     padding: ${(props) => props.theme.margins.medium};
     box-sizing: border-box;
     z-index: 1100;
+    transition: ${(props) => props.theme.transition};
 
     button:not(:last-of-type) {
         margin-bottom: ${(props) => props.theme.margins.small};
@@ -33,6 +34,14 @@ const StyledSideMenu = styled.nav`
 
         &.full-height {
             margin-bottom: auto;
+        }
+    }
+
+    @media (max-width: ${(props) => props.theme.screenSizes.big}) {
+        left: -100vw;
+
+        &.shown {
+            left: 0;
         }
     }
 `
