@@ -20,6 +20,18 @@ const StyledContentSection = styled.main`
         grid-template-columns: repeat(5, minmax(0, 1fr));
         grid-gap: ${(props) => props.theme.margins.medium};
     }
+
+    @media (max-width: ${(props) => props.theme.screenSizes.medium}) {
+        .content {
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+        }
+    }
+
+    @media (max-width: ${(props) => props.theme.screenSizes.small}) {
+        .content {
+            grid-template-columns: repeat(1, minmax(0, 1fr));
+        }
+    }
 `
 
 export default StyledContentSection
