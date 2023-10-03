@@ -15,6 +15,7 @@ type __contentProps = {
         name: string
         extension: string
         preview?: string
+        star?: boolean
     }[]
 }
 
@@ -37,7 +38,8 @@ const __content: __contentProps = {
         }, {
             name: 'Wycieczka na rowery 4',
             extension: 'JPG',
-            preview: photo3
+            preview: photo3,
+            star: true
         }, {
             name: 'info',
             extension: 'TXT'
@@ -69,7 +71,13 @@ const ContentSection = () => {
                 <div className="content">
                     {
                         __content.files.map((file, n) => {
-                            return <File key={n} name={file.name} extension={file.extension} preview={file.preview} />
+                            return <File
+                                key={n}
+                                name={file.name}
+                                extension={file.extension}
+                                preview={file.preview}
+                                star={file.star}
+                            />
                         })
                     }
                 </div>
