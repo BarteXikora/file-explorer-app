@@ -14,6 +14,11 @@ const StyledTopBar = styled.section`
 
     .hamburger {
         display: none;
+        margin-right: ${(props) => props.theme.margins.small};
+    }
+
+    .button-tools {
+        display: none;
     }
 
     div {
@@ -23,14 +28,28 @@ const StyledTopBar = styled.section`
 
     .full-width {
         width: 100%;
-        margin-right: ${(props) => props.theme.margins.big};
+        margin-right: ${(props) => props.theme.margins.small};
     }
 
     @media (max-width: ${(props) => props.theme.screenSizes.big}) {
         padding-left: ${(props) => props.theme.margins.big};
 
-        .hamburger {
+        .hamburger, .button-tools {
             display: flex;
+        }
+
+        .tools-buttons {
+            display: none;
+        }
+
+        .full-width {
+            justify-content: center;
+        }
+    }
+
+    @media (max-width: ${(props) => props.theme.screenSizes.medium}) {
+        .help-button-text {
+            display: none;
         }
     }
 `

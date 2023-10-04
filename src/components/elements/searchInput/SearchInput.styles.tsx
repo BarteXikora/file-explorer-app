@@ -26,6 +26,12 @@ const StyledSearchInput = styled.form`
             color: ${(props) => props.theme.colors.grayLighter};
         }
     }
+
+    @media (max-width: ${(props) => props.theme.screenSizes.medium}) {
+        span {
+            display: none;
+        }   
+    }
 `
 
 export default StyledSearchInput

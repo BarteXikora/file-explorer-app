@@ -9,7 +9,7 @@ const SearchInput = () => {
         <Button>
             <img src={iconSearch} alt="Wyszukaj" />
 
-            Wyszukaj
+            <span>Wyszukaj</span>
         </Button>
     </StyledSearchInput>
 }
