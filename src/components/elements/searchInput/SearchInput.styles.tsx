@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import Button from '../../ui/button/Button'
 
 const StyledSearchInput = styled.form`
     border: 1px solid ${(props) => props.theme.colors.white};
@@ -32,6 +33,18 @@ const StyledSearchInput = styled.form`
             display: none;
         }   
     }
+
+    @media (max-width: ${(props) => props.theme.screenSizes.small}) {
+        display: none;
+    }
 `
 
-export default StyledSearchInput
+const StyledMobileSearchButton = styled(Button)`
+    display: none;
+
+    @media (max-width: ${(props) => props.theme.screenSizes.small}) {
+        display: flex;
+    }
+`
+
+export { StyledSearchInput, StyledMobileSearchButton }
