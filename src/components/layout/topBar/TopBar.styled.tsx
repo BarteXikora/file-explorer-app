@@ -12,6 +12,10 @@ const StyledTopBar = styled.section`
     background-color: ${(props) => props.theme.colors.grayDarker};
     z-index: 1000;
 
+    .hamburger {
+        display: none;
+    }
+
     div {
         display: flex;
         gap: ${(props) => props.theme.margins.small};
@@ -24,6 +28,10 @@ const StyledTopBar = styled.section`
 
     @media (max-width: ${(props) => props.theme.screenSizes.big}) {
         padding-left: ${(props) => props.theme.margins.big};
+
+        .hamburger {
+            display: flex;
+        }
     }
 `
 

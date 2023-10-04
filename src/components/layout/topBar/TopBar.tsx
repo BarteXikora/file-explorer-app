@@ -8,10 +8,15 @@ import iconFilter from '../../../assets/icons/icon-filter.png'
 import iconSort from '../../../assets/icons/icon-sort.png'
 import iconDisplay from '../../../assets/icons/icon-display.png'
 import iconHelp from '../../../assets/icons/icon-help.png'
+import iconHamburger from '../../../assets/icons/icon-hamburger.png'
 
 const TopBar = () => {
     return <StyledTopBar data-testid='top-bar'>
         <div className='full-width'>
+            <Button variant='primary' className='hamburger'>
+                <img src={iconHamburger} alt="Otwórz / schowaj menu" />
+            </Button>
+
             <SearchInput />
 
             <Button variant='secondary'>
