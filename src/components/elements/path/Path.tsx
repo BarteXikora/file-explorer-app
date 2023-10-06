@@ -17,13 +17,13 @@ const getShortName = (name: string) => {
     return shortenName
 }
 
-const PathPart = ({ path, location }: { path: string, location: string }) => {
+const PathPart = ({ path, location, isLast }: { path: string, location: string, isLast: boolean }) => {
     return <>
         <a href={location}>
             {getShortName(path)}
         </a>
 
-        <span className='arrow' />
+        {!isLast && <span className='arrow' />}
     </>
 }
 
@@ -56,14 +56,13 @@ const Path = () => {
 
         <h1>
             {
-                // __curentPath.length > 5 && <CollapsePathButton content={__curentPath.slice(0, __curentPath.length - 3)} />
                 __curentPath.length >= 5 && <CollapsePathButton content={__curentPath} />
             }
 
             {
                 __curentPath.map((path, n) => {
                     if ((__curentPath.length >= 5 && n > __curentPath.length - 4) || __curentPath.length < 5)
-                        return <PathPart key={n} path={path} location='#' />
+                        return <PathPart key={n} path={path} location='#' isLast={n === __curentPath.length - 1} />
 
                     return <></>
                 })
