@@ -19,6 +19,9 @@ const StyledPath = styled.div`
     }
 
     h1 {
+        display: flex;
+        align-items: center;
+        gap: ${(props) => props.theme.margins.small};
         margin: 0;
         font-size: ${(props) => props.theme.fontSizes.title};
         cursor: default;
@@ -34,6 +37,19 @@ const StyledPath = styled.div`
         }
     }
 
+    .dropdown-box {
+        font-size: ${(props) => props.theme.fontSizes.default};
+        display: flex;
+        flex-direction: column;
+
+        button {
+            width: 100%;
+            white-space: nowrap;
+            margin-bottom: ${(props) => props.theme.margins.small};
+            margin-right: ${(props) => props.theme.margins.medium};
+        }
+    }
+
    .arrow {
        position: relative;
        display: inline-block;
@@ -44,7 +60,7 @@ const StyledPath = styled.div`
            content: '';
            width: 12px;
            height: 12px;
-           top: -14px;
+           top: -5px;
            left: 5px;
            transform: rotateZ(45deg);
            border-top: 2px solid ${(props) => props.theme.colors.white};
