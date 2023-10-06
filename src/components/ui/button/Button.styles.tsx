@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 
-type StyledButtonProps = {
+export type StyledButtonProps = {
     variant?: 'primary' | 'secondary' | 'tertiary' | 'menu'
     size?: 'big' | 'small'
 }
