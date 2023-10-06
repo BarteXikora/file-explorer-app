@@ -3,7 +3,7 @@ import styled from 'styled-components'
 const StyledDropdown = styled.div`
     position: relative;
 
-    button {
+    .button-dropdown {
         position: relative;
         padding-right: calc(${(props) => props.theme.margins.medium} + 17px);
 
@@ -12,7 +12,7 @@ const StyledDropdown = styled.div`
            content: '';
            width: 12px;
            height: 12px;
-           top: 12px;
+           margin-bottom: 5px;
            right: ${(props) => props.theme.margins.small};
            transform: rotateZ(135deg);
            border-top: 2px solid ${(props) => props.theme.colors.white};

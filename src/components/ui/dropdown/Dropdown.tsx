@@ -14,6 +14,7 @@ const Dropdown = ({ buttonContent, buttonOptions, dropdownContent }: DropdownPro
 
     return <StyledDropdown className='dropdown'>
         <Button
+            className='button-dropdown'
             variant={buttonOptions?.variant || 'primary'}
             size={buttonOptions?.size || 'big'}
             onClick={() => setShown(!shown)}
