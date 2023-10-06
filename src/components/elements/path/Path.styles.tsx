@@ -28,14 +28,27 @@ const StyledPath = styled.div`
     }
 
     a {
+        display: inline-block;
         color: ${(props) => props.theme.colors.white};
         text-decoration: none;
         transition: ${(props) => props.theme.transition};
+        max-width: 20%;
+        white-space: nowrap;
+        overflow: hidden;
 
         &:hover {
             color: ${(props) => props.theme.colors.primaryLighter};
         }
     }
+
+    .path-dropdown {
+        display: none;
+    }
+
+    .dropdown button {
+        white-space: nowrap;
+    }
+    
 
     .dropdown-box {
         font-size: ${(props) => props.theme.fontSizes.default};
@@ -44,10 +57,16 @@ const StyledPath = styled.div`
 
         button {
             width: 100%;
-            white-space: nowrap;
             margin-bottom: ${(props) => props.theme.margins.small};
             margin-right: ${(props) => props.theme.margins.medium};
         }
+    }
+
+    .path-links {
+        display: flex;
+        align-items: center;
+        width: 100%;
+        gap: ${(props) => props.theme.margins.small};
     }
 
    .arrow {
@@ -68,6 +87,27 @@ const StyledPath = styled.div`
            border-radius: 0 ${(props) => props.theme.borderRadiuses.small} 0 0;
        }
    }
+   
+   @media (max-width: ${(props) => props.theme.screenSizes.medium}) {
+        padding: 0;
+        margin: 0;
+
+        span {
+            display: none;
+        }
+
+        &::after {
+            display: none;
+        }
+
+        .path-dropdown {
+            display: block;
+        }
+
+        .path-links {
+            display: none;
+        }
+    }
 `
 
 export default StyledPath

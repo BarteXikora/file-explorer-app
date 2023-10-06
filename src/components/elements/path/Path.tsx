@@ -27,8 +27,8 @@ const PathPart = ({ path, location, isLast }: { path: string, location: string, 
     </>
 }
 
-const CollapsePathButton = ({ content }: { content: string[] }) => {
-    return <>
+const CollapsePathButton = ({ content, isPathCollapsed }: { content: string[], isPathCollapsed: boolean }) => {
+    return <div className={`path-dropdown ${isPathCollapsed && 'collapsed'}`}>
         <Dropdown
             buttonContent='Wyświetl ścieżkę'
             dropdownContent={<>
@@ -44,10 +44,14 @@ const CollapsePathButton = ({ content }: { content: string[] }) => {
             </>}
         />
 
-        <span>...</span>
+        {
+            isPathCollapsed && <>
+                <span>...</span>
 
-        <span className='arrow' />
-    </>
+                <span className='arrow' />
+            </>
+        }
+    </div>
 }
 
 const Path = () => {
@@ -55,18 +59,18 @@ const Path = () => {
         <span>Ścieżka:</span>
 
         <h1>
-            {
-                __curentPath.length >= 5 && <CollapsePathButton content={__curentPath} />
-            }
+            <CollapsePathButton content={__curentPath} isPathCollapsed={__curentPath.length >= 5} />
 
-            {
-                __curentPath.map((path, n) => {
-                    if ((__curentPath.length >= 5 && n > __curentPath.length - 4) || __curentPath.length < 5)
-                        return <PathPart key={n} path={path} location='#' isLast={n === __curentPath.length - 1} />
+            <div className="path-links">
+                {
+                    __curentPath.map((path, n) => {
+                        if ((__curentPath.length >= 5 && n > __curentPath.length - 4) || __curentPath.length < 5)
+                            return <PathPart key={n} path={path} location='#' isLast={n === __curentPath.length - 1} />
 
-                    return <></>
-                })
-            }
+                        return <></>
+                    })
+                }
+            </div>
         </h1>
     </StyledPath>
 }
