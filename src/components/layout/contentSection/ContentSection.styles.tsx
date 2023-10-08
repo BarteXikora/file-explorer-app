@@ -2,6 +2,7 @@ import styled from 'styled-components'
 
 const StyledContentSection = styled.main`
     padding: ${(props) => props.theme.margins.sectionBig};
+    padding-top: calc(${(props) => props.theme.margins.medium} + 309px);
     padding-bottom: calc(${(props) => props.theme.margins.big} * 2.5);
 
     section {
@@ -22,6 +23,8 @@ const StyledContentSection = styled.main`
     }
 
     @media (max-width: ${(props) => props.theme.screenSizes.medium}) {
+        padding-top: calc(${(props) => props.theme.margins.medium} + 195px);
+
         .content {
             grid-template-columns: repeat(3, minmax(0, 1fr));
         }
@@ -29,6 +32,7 @@ const StyledContentSection = styled.main`
 
     @media (max-width: ${(props) => props.theme.screenSizes.small}) {
         padding: ${(props) => props.theme.margins.sectionBigMobile};
+        padding-top: calc(${(props) => props.theme.margins.medium} + 140px);
         padding-bottom: calc(${(props) => props.theme.margins.big} * 2.5);
 
         .content {
