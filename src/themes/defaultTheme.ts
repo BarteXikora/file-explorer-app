@@ -42,7 +42,7 @@ const defaultTheme = {
     screenSizes: {
         big: '1250px',
         medium: '950px',
-        small: '560px'
+        small: '630px'
     }
 }
 
