@@ -13,6 +13,13 @@ const StyledHeader = styled.header`
     width: 100%;
     z-index: 800;
 
+    &.header-rolled {
+        .path-box {
+            flex-basis: 0;
+            margin-right: ${(props) => props.theme.margins.small};
+        }
+    }
+
     .path-box {
         flex-basis: 100%;
     }
