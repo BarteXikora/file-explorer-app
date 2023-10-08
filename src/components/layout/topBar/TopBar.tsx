@@ -46,7 +46,7 @@ const TopBar = () => {
         </div>
 
         <div>
-            <Button variant='secondary'>
+            <Button variant='secondary' className='button-help'>
                 <img src={iconHelp} alt="Pomoc" />
 
                 <span className="help-button-text">Pomoc...</span>

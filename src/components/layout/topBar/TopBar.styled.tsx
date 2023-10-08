@@ -55,6 +55,10 @@ const StyledTopBar = styled.section`
 
     @media (max-width: ${(props) => props.theme.screenSizes.small}) {
         padding: ${(props) => props.theme.margins.sectionBigMobile};
+
+        .button-help {
+            display: none;
+        }
     }
 `
 
