@@ -3,7 +3,7 @@ import styled from 'styled-components'
 const StyledPath = styled.div`
     padding: ${(props) => props.theme.margins.small} 0;
     padding-left: 25px;
-    margin-bottom: ${(props) => props.theme.margins.medium};
+    margin-bottom: ${(props) => props.theme.margins.small};
     position: relative;
     font-weight: bold;
 
