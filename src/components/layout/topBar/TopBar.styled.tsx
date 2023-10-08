@@ -52,6 +52,10 @@ const StyledTopBar = styled.section`
             display: none;
         }
     }
+
+    @media (max-width: ${(props) => props.theme.screenSizes.small}) {
+        padding: ${(props) => props.theme.margins.sectionBigMobile};
+    }
 `
 
 export default StyledTopBar

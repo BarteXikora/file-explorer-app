@@ -24,6 +24,8 @@ const defaultTheme = {
         sectionMedium: '13px 26px',
         sectionSmall: '3px 13px',
 
+        sectionBigMobile: '13px',
+
         sectionBigImg: '20px 36px',
         sectionMediumImg: '9px 13px',
         sectionSmallImg: '3px 13px',

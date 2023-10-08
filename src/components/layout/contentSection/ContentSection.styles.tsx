@@ -28,6 +28,9 @@ const StyledContentSection = styled.main`
     }
 
     @media (max-width: ${(props) => props.theme.screenSizes.small}) {
+        padding: ${(props) => props.theme.margins.sectionBigMobile};
+        padding-bottom: calc(${(props) => props.theme.margins.big} * 2.5);
+
         .content {
             grid-template-columns: repeat(1, minmax(0, 1fr));
         }
