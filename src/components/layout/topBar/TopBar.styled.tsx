@@ -12,6 +12,15 @@ const StyledTopBar = styled.section`
     background-color: ${(props) => props.theme.colors.grayDarker};
     z-index: 1000;
 
+    .hamburger {
+        display: none;
+        margin-right: ${(props) => props.theme.margins.small};
+    }
+
+    .button-tools {
+        display: none;
+    }
+
     div {
         display: flex;
         gap: ${(props) => props.theme.margins.small};
@@ -19,6 +28,37 @@ const StyledTopBar = styled.section`
 
     .full-width {
         width: 100%;
+        margin-right: ${(props) => props.theme.margins.small};
+    }
+
+    @media (max-width: ${(props) => props.theme.screenSizes.big}) {
+        padding-left: ${(props) => props.theme.margins.big};
+
+        .hamburger, .button-tools {
+            display: flex;
+        }
+
+        .tools-buttons {
+            display: none;
+        }
+
+        .full-width {
+            justify-content: center;
+        }
+    }
+
+    @media (max-width: ${(props) => props.theme.screenSizes.medium}) {
+        .help-button-text {
+            display: none;
+        }
+    }
+
+    @media (max-width: ${(props) => props.theme.screenSizes.small}) {
+        padding: ${(props) => props.theme.margins.sectionBigMobile};
+
+        .button-help {
+            display: none;
+        }
     }
 `
 

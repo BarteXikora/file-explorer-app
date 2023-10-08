@@ -1,64 +1,44 @@
-import { useState } from 'react'
+import { useEffect, useRef } from 'react'
 
 import StyledHeader from './Header.styles'
 import Path from '../../elements/path/Path'
 import Button from '../../ui/button/Button'
-import Checkbox from '../../ui/checkbox/Checkbox'
 
 import iconUpload from '../../../assets/icons/icon-upload.png'
 import iconNewFolder from '../../../assets/icons/icon-new-folder.png'
-import iconDownload from '../../../assets/icons/icon-download.png'
-import iconMove from '../../../assets/icons/icon-move.png'
-import iconStar from '../../../assets/icons/icon-star.png'
-import iconShow from '../../../assets/icons/icon-show.png'
-import iconDelete from '../../../assets/icons/icon-delete.png'
 
 const Header = () => {
-    const [__allSelected, __setAllSelected] = useState(false)
+    const headerRef = useRef<HTMLElement>(null)
 
-    return <StyledHeader>
-        <Path />
+    useEffect(() => {
+        const handleScroll = () => {
+            if (window.scrollY >= 50) headerRef.current && headerRef.current.classList.add('header-rolled')
+            else headerRef.current && headerRef.current.classList.remove('header-rolled')
+        }
 
-        <div className="functions-box">
-            <Checkbox isChecked={__allSelected} setIsChecked={__setAllSelected} label='Zaznacz wszystko' />
+        window.addEventListener('scroll', handleScroll)
 
-            <span className="separator" />
+        return () => { window.removeEventListener('scroll', handleScroll) }
 
-            <Button size='small'>
+    }, [])
+
+    return <StyledHeader ref={headerRef}>
+        <div className="path-box">
+            <Path />
+        </div>
+
+        <div className="buttons-box">
+            <Button>
                 <img src={iconUpload} alt="Wrzuć pliki na dysk" />
 
-                Wrzuć pliki na dysk
+                <span>Wrzuć pliki na dysk</span>
             </Button>
 
-            <Button variant='tertiary' size='small'>
+            <Button>
                 <img src={iconNewFolder} alt="Utwórz folder" />
 
-                Utwórz folder
+                <span>Utwórz folder</span>
             </Button>
-
-            <div className="selected-operations">
-                <span className="separator" />
-
-                <Button variant='tertiary' size='small'>
-                    <img src={iconDownload} alt="Pobierz" />
-                </Button>
-
-                <Button variant='tertiary' size='small'>
-                    <img src={iconMove} alt="Przenieś..." />
-                </Button>
-
-                <Button variant='tertiary' size='small'>
-                    <img src={iconStar} alt="Oznacz gwiazdką" />
-                </Button>
-
-                <Button variant='tertiary' size='small'>
-                    <img src={iconShow} alt="Zmień widoczność" />
-                </Button>
-
-                <Button variant='tertiary' size='small'>
-                    <img src={iconDelete} alt="Usuń" />
-                </Button>
-            </div>
         </div>
     </StyledHeader>
 }

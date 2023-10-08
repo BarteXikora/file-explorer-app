@@ -24,6 +24,8 @@ const defaultTheme = {
         sectionMedium: '13px 26px',
         sectionSmall: '3px 13px',
 
+        sectionBigMobile: '13px',
+
         sectionBigImg: '20px 36px',
         sectionMediumImg: '9px 13px',
         sectionSmallImg: '3px 13px',
@@ -38,7 +40,12 @@ const defaultTheme = {
         big: '13px',
         small: '3px'
     },
-    transition: 'all .2s ease-in-out'
+    transition: 'all .2s ease-in-out',
+    screenSizes: {
+        big: '1250px',
+        medium: '950px',
+        small: '630px'
+    }
 }
 
 export default defaultTheme

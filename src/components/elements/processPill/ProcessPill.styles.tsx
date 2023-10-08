@@ -19,5 +19,15 @@ const StyledProcessPill = styled.div`
     &:hover {
         border-color: ${(props) => props.theme.colors.white};
     }
+
+    @media (max-width: ${(props) => props.theme.screenSizes.big}) {
+        left: ${(props) => props.theme.margins.big};
+    }
+
+    @media (max-width: ${(props) => props.theme.screenSizes.small}) {
+        bottom: ${(props) => props.theme.margins.small};
+        left: ${(props) => props.theme.margins.small};
+        padding: ${(props) => props.theme.margins.sectionSmall};
+    }
 `
 export default StyledProcessPill

@@ -8,6 +8,8 @@ import Header from './components/layout/header/Header'
 import ContentSection from './components/layout/contentSection/ContentSection'
 import ProcessPill from './components/elements/processPill/ProcessPill'
 
+import ScreenSize from './components/__dev/__screenSize/ScreenSize'
+
 const App = () => {
   return (
     <AppTheme>
@@ -22,6 +24,8 @@ const App = () => {
 
         <ProcessPill />
       </MainBody>
+
+      <ScreenSize />
     </AppTheme>
   )
 }
