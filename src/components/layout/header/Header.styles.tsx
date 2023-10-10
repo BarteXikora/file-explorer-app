@@ -24,12 +24,6 @@ const StyledHeader = styled.header`
         flex-basis: 100%;
     }
 
-    .separator {
-        margin: 0 ${(props) => props.theme.margins.small};
-        height: 25px;
-        border: 1px solid ${(props) => props.theme.colors.white};
-    }
-
     .buttons-box {
         display: flex;
         align-items: center;
