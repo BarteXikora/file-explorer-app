@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 
-const StyledContentTools = styled.div`
+const StyledContentTools = styled.section`
     position: fixed;
     width: 100%;
     box-sizing: border-box;
@@ -11,6 +11,10 @@ const StyledContentTools = styled.div`
     align-items: center;
     gap: ${(props) => props.theme.margins.small};
     z-index: 1100;
+
+    &.tools-rolled {
+        top: 194px;
+    }
 
     h2 {
         display: block;
@@ -26,6 +30,14 @@ const StyledContentTools = styled.div`
         margin: 0 ${(props) => props.theme.margins.small};
         height: 25px;
         border: 1px solid ${(props) => props.theme.colors.white};
+    }
+
+    @media (max-width: ${(props) => props.theme.screenSizes.medium}) {
+        top: 194px;
+    }
+
+    @media (max-width: ${(props) => props.theme.screenSizes.small}) {
+        top: 140px !important;
     }
 `
 
