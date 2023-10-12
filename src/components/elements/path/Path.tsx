@@ -26,6 +26,7 @@ const CollapsePathButton = ({ content, isPathCollapsed }: { content: string[], i
     return <div className={`path-dropdown ${isPathCollapsed && 'collapsed'}`}>
         <Dropdown
             buttonContent='Wyświetl ścieżkę'
+            buttonOptions={{ size: 'small' }}
             dropdownContent={<>
                 {
                     content.map((path, n) => {

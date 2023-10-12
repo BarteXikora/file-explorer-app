@@ -28,13 +28,13 @@ const Header = () => {
         </div>
 
         <div className="buttons-box">
-            <Button>
+            <Button size='small'>
                 <img src={iconUpload} alt="Wrzuć pliki na dysk" />
 
                 <span>Wrzuć pliki na dysk</span>
             </Button>
 
-            <Button>
+            <Button size='small'>
                 <img src={iconNewFolder} alt="Utwórz folder" />
 
                 <span>Utwórz folder</span>
