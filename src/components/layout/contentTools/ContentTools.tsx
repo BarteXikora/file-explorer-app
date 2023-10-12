@@ -1,4 +1,4 @@
-import { useState, useEffect, useRef } from 'react'
+import { useState } from 'react'
 import StyledContentTools from './ContentTools.styles'
 import Checkbox from '../../ui/checkbox/Checkbox'
 import Button from '../../ui/button/Button'
@@ -14,21 +14,7 @@ const __currentFolderName = 'Wycieczka na rowery -  sierpień 2023'
 const ContentTools = () => {
     const [__isAllSelected, __setIsAllSelected] = useState(false)
 
-    const toolsRef = useRef<HTMLElement>(null)
-
-    useEffect(() => {
-        const handleScroll = () => {
-            if (window.scrollY >= 50) toolsRef.current && toolsRef.current.classList.add('tools-rolled')
-            else toolsRef.current && toolsRef.current.classList.remove('tools-rolled')
-        }
-
-        window.addEventListener('scroll', handleScroll)
-
-        return () => { window.removeEventListener('scroll', handleScroll) }
-
-    }, [])
-
-    return <StyledContentTools ref={toolsRef}>
+    return <StyledContentTools>
         <h2>{__currentFolderName}:</h2>
 
         <div className="separator"></div>
