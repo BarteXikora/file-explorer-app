@@ -44,8 +44,10 @@ const StyledHeader = styled.header`
     }
 
     @media (max-width: ${(props) => props.theme.screenSizes.small}) {
-        padding: ${(props) => props.theme.margins.sectionBigMobile};
+        .header {
+            padding: ${(props) => props.theme.margins.sectionBigMobile};
         padding-top: calc(${(props) => props.theme.margins.medium} + 56px);
+        }
 
         .buttons-box button span {
             display: none;
