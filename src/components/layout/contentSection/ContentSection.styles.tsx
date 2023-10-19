@@ -9,6 +9,10 @@ const StyledContentSection = styled.main`
         margin-bottom: ${(props) => props.theme.margins.big};
     }
 
+    h1 {
+        display: none;
+    }
+
     h2 {
         font-size: ${(props) => props.theme.fontSizes.default};
         padding-left: ${(props) => props.theme.margins.small};
@@ -34,6 +38,16 @@ const StyledContentSection = styled.main`
         padding: ${(props) => props.theme.margins.sectionBigMobile};
         padding-top: calc(${(props) => props.theme.margins.medium} + 140px);
         padding-bottom: calc(${(props) => props.theme.margins.big} * 2.5);
+
+        h1 {
+            display: block;
+            max-width: 100%;
+            overflow: hidden;
+            white-space: nowrap;
+            font-size: ${(props) => props.theme.fontSizes.title};
+            color: ${(props) => props.theme.colors.grayLighter};
+            margin-top: ${(props) => props.theme.margins.medium};
+        }
 
         .content {
             grid-template-columns: repeat(1, minmax(0, 1fr));

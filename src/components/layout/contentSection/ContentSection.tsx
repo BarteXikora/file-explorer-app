@@ -2,6 +2,8 @@ import StyledContentSection from './ContentSection.styles'
 import Folder from '../../elements/folder/Folder'
 import File from '../../elements/file/File'
 
+import shortName from '../../../functions/shortName/shortName'
+
 import photo0 from '../../../assets/__files/photo0.png'
 import photo1 from '../../../assets/__files/photo1.png'
 import photo3 from '../../../assets/__files/photo3.png'
@@ -122,8 +124,12 @@ const __content: __contentProps = {
     ]
 }
 
+const __currentFolderName = 'Wycieczka na rowery -  sierpień 2023'
+
 const ContentSection = () => {
     return <StyledContentSection>
+
+        <h1>{shortName(__currentFolderName, 30)}:</h1>
 
         {__content.folders.length > 0 && (
             <section>
