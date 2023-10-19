@@ -2,7 +2,7 @@ import StyledLogo from './Logo.styles'
 import logo from '../../../assets/img/img-logo.png'
 
 const Logo = () => {
-    return <StyledLogo><img src={logo} alt="multishare logo" /></StyledLogo>
+    return <StyledLogo href='./'><img src={logo} alt="Logo Multishare" /></StyledLogo>
 }
 
 export default Logo
