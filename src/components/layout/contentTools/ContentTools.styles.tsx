@@ -30,6 +30,10 @@ const StyledContentTools = styled.section`
         border: 1px solid ${(props) => props.theme.colors.white};
     }
 
+    .tools-dropdown {
+        display: none;
+    }
+
     .tools-buttons {
         display: none;
 
@@ -49,8 +53,24 @@ const StyledContentTools = styled.section`
     }
 
     @media (max-width: ${(props) => props.theme.screenSizes.small}) {
-       display: none;
+        padding: ${(props) => props.theme.margins.small};
 
+        &:not(.section-shown) {
+            display: none;
+        }
+
+        .tools-dropdown {
+            display: block;
+            margin-left: auto;
+
+            button {
+                white-space: nowrap;
+            }
+        }
+
+        .tools-buttons.shown {
+            display: none;
+        }
     }
 `
 
