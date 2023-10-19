@@ -22,17 +22,23 @@ const StyledDropdown = styled.div`
     }
 
     .dropdown-box {
-        display: none;
+        display: none !important;
 
         &.shown {
-            display: block;
+            display: block !important;
             position: absolute;
             background-color: ${(props) => props.theme.colors.black};
             padding: ${(props) => props.theme.margins.sectionMedium};
             border: 1px solid ${(props) => props.theme.colors.white};
             border-radius: ${(props) => props.theme.borderRadiuses.big};
             top: 45px;
+            left: 0;
             z-index: 1000;
+        }
+
+        &.dropdown-right {
+            left: unset;
+            right: 0;
         }
     }
 `

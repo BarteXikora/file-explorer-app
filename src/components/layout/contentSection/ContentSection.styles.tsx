@@ -2,11 +2,15 @@ import styled from 'styled-components'
 
 const StyledContentSection = styled.main`
     padding: ${(props) => props.theme.margins.sectionBig};
-    padding-top: calc(${(props) => props.theme.margins.medium} + 309px);
+    padding-top: calc(${(props) => props.theme.margins.medium} + 297px + 63.6px);
     padding-bottom: calc(${(props) => props.theme.margins.big} * 2.5);
 
     section {
         margin-bottom: ${(props) => props.theme.margins.big};
+    }
+
+    h1 {
+        display: none;
     }
 
     h2 {
@@ -23,7 +27,7 @@ const StyledContentSection = styled.main`
     }
 
     @media (max-width: ${(props) => props.theme.screenSizes.medium}) {
-        padding-top: calc(${(props) => props.theme.margins.medium} + 195px);
+        padding-top: calc(${(props) => props.theme.margins.medium} + 187.6px + 63.6px);
 
         .content {
             grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -34,6 +38,16 @@ const StyledContentSection = styled.main`
         padding: ${(props) => props.theme.margins.sectionBigMobile};
         padding-top: calc(${(props) => props.theme.margins.medium} + 140px);
         padding-bottom: calc(${(props) => props.theme.margins.big} * 2.5);
+
+        h1 {
+            display: block;
+            max-width: 100%;
+            overflow: hidden;
+            white-space: nowrap;
+            font-size: ${(props) => props.theme.fontSizes.title};
+            color: ${(props) => props.theme.colors.grayLighter};
+            margin-top: ${(props) => props.theme.margins.medium};
+        }
 
         .content {
             grid-template-columns: repeat(1, minmax(0, 1fr));

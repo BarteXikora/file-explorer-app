@@ -2,7 +2,7 @@ import styled from 'styled-components'
 
 const StyledScreenSize = styled.div`
     .size-box {
-        position: absolute;
+        position: fixed;
         z-index: 5000;
         bottom: 15px;
         right: 15px;

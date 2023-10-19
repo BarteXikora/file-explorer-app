@@ -1,6 +1,7 @@
 import { useEffect, useRef } from 'react'
 
 import StyledHeader from './Header.styles'
+import ContentTools from '../contentTools/ContentTools'
 import Path from '../../elements/path/Path'
 import Button from '../../ui/button/Button'
 
@@ -23,22 +24,28 @@ const Header = () => {
     }, [])
 
     return <StyledHeader ref={headerRef}>
-        <div className="path-box">
-            <Path />
+        <div className="header">
+            <div className="path-box">
+                <Path />
+            </div>
+
+            <div className="buttons-box">
+                <Button size='small'>
+                    <img src={iconUpload} alt="Wrzuć pliki na dysk" />
+
+                    <span>Wrzuć pliki na dysk</span>
+                </Button>
+
+                <Button size='small'>
+                    <img src={iconNewFolder} alt="Utwórz folder" />
+
+                    <span>Utwórz folder</span>
+                </Button>
+            </div>
         </div>
 
-        <div className="buttons-box">
-            <Button>
-                <img src={iconUpload} alt="Wrzuć pliki na dysk" />
-
-                <span>Wrzuć pliki na dysk</span>
-            </Button>
-
-            <Button>
-                <img src={iconNewFolder} alt="Utwórz folder" />
-
-                <span>Utwórz folder</span>
-            </Button>
+        <div className="content-tools">
+            <ContentTools />
         </div>
     </StyledHeader>
 }
