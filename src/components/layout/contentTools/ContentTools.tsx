@@ -13,17 +13,22 @@ const __currentFolderName = 'Wycieczka na rowery -  sierpień 2023'
 
 const ContentTools = () => {
     const [__isAllSelected, __setIsAllSelected] = useState(false)
+    const [areToolsShown, setAreToolsShown] = useState(true)
 
     return <StyledContentTools>
-        <h2>{__currentFolderName}:</h2>
+        <div className="folder-name">
+            <h2>{__currentFolderName}:</h2>
 
-        <div className="separator"></div>
+            <div className="separator"></div>
+        </div>
 
-        <Checkbox isChecked={__isAllSelected} setIsChecked={__setIsAllSelected} label='Zaznacz wszystko' />
+        <div className="select-all">
+            <Checkbox isChecked={__isAllSelected} setIsChecked={__setIsAllSelected} label='Zaznacz wszystko' />
+        </div>
 
-        <div className="separator"></div>
+        <div className={`tools-buttons ${areToolsShown ? 'shown' : ''}`}>
+            <div className="separator"></div>
 
-        <div className="tools-buttons">
             <Button variant='tertiary' size='small'>
                 <img src={iconDownload} alt="Pobierz" />
             </Button>
