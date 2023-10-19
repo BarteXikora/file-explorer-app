@@ -7,9 +7,12 @@ type DropdownProps = {
     buttonContent: React.ReactNode | string
     dropdownContent: React.ReactNode | string
     buttonOptions?: StyledButtonProps
+    dropdownOptions?: {
+        xPosition: 'left' | 'right' | undefined
+    }
 }
 
-const Dropdown = ({ buttonContent, buttonOptions, dropdownContent }: DropdownProps) => {
+const Dropdown = ({ buttonContent, buttonOptions, dropdownContent, dropdownOptions }: DropdownProps) => {
     const [shown, setShown] = useState(false)
 
     return <StyledDropdown className='dropdown'>
@@ -22,7 +25,11 @@ const Dropdown = ({ buttonContent, buttonOptions, dropdownContent }: DropdownPro
             {buttonContent}
         </Button>
 
-        <div className={`dropdown-box ${shown && 'shown'}`}>{dropdownContent}</div>
+        <div
+            className={`dropdown-box ${shown && 'shown'} ${dropdownOptions?.xPosition === 'right' && 'dropdown-right'}`}
+        >
+            {dropdownContent}
+        </div>
     </StyledDropdown>
 }
 
