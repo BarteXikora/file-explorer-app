@@ -18,7 +18,7 @@ const CollapsePathButton = ({ content, isPathCollapsed, maxFolderNameLength }: C
             dropdownContent={<>
                 {
                     content.map((path, n) => {
-                        return <Button variant='tertiary' size='small'>
+                        return <Button key={n} variant='tertiary' size='small'>
                             <img src={iconFolder} alt="Folder" />
 
                             {shortName(path, maxFolderNameLength)}
