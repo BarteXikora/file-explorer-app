@@ -44,7 +44,13 @@ const StyledContentTools = styled.section`
 
     @media (max-width: ${(props) => props.theme.screenSizes.medium}) {
         .folder-name:has(~ .tools-buttons.shown) {
-            display: none;
+            width: 0;
+            padding: 0;
+            margin: 0;
+
+            .separator {
+                display: none;
+            }
         }
 
         .folder-name h2 {

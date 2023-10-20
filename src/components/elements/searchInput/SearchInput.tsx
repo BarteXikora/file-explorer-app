@@ -7,7 +7,7 @@ const SearchInput = () => {
         <StyledSearchInput>
             <input type="text" placeholder='Wpisz szukaną frazę tutaj...' />
 
-            <Button>
+            <Button role='submit'>
                 <img src={iconSearch} alt="Wyszukaj" />
 
                 <span>Wyszukaj</span>
