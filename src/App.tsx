@@ -1,3 +1,6 @@
+import { Provider } from 'react-redux'
+import { store } from './store/store'
+
 import AppTheme from './themes/AppTheme'
 import GlobalStyles from './themes/GlobalStyles'
 
@@ -12,21 +15,23 @@ import ScreenSize from './components/__dev/__screenSize/ScreenSize'
 
 const App = () => {
   return (
-    <AppTheme>
-      <GlobalStyles />
-      <SideMenu />
-      <MainBody>
-        <TopBar />
+    <Provider store={store}>
+      <AppTheme>
+        <GlobalStyles />
+        <SideMenu />
+        <MainBody>
+          <TopBar />
 
-        <Header />
+          <Header />
 
-        <ContentSection />
+          <ContentSection />
 
-        <ProcessPill />
-      </MainBody>
+          <ProcessPill />
+        </MainBody>
 
-      <ScreenSize />
-    </AppTheme>
+        <ScreenSize />
+      </AppTheme>
+    </Provider>
   )
 }
 
