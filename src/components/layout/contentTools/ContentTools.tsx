@@ -1,4 +1,7 @@
 import { useState } from 'react'
+import { useSelector } from '../../../store/store'
+import shortName from '../../../functions/shortName/shortName'
+
 import StyledContentTools from './ContentTools.styles'
 import Checkbox from '../../ui/checkbox/Checkbox'
 import Button from '../../ui/button/Button'
@@ -10,15 +13,16 @@ import iconStar from '../../../assets/icons/icon-star.png'
 import iconShow from '../../../assets/icons/icon-show.png'
 import iconDelete from '../../../assets/icons/icon-delete.png'
 
-const __currentFolderName = 'Wycieczka na rowery -  sierpień 2023'
-
 const ContentTools = () => {
     const [__isAllSelected, __setIsAllSelected] = useState(false)
     const [areToolsShown, setAreToolsShown] = useState(true)
 
+    const projectName = useSelector(state => state.content.projectName)
+    const currentPath = useSelector(state => state.content.currentPath)
+
     return <StyledContentTools className={areToolsShown ? 'section-shown' : ''}>
         <div className="folder-name">
-            <h2>{__currentFolderName}:</h2>
+            <h2>{shortName(currentPath.length > 0 ? currentPath[currentPath.length - 1] : projectName, 35)}:</h2>
 
             <div className="separator"></div>
         </div>

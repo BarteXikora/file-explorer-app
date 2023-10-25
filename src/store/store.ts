@@ -6,8 +6,12 @@ import {
 
 } from 'react-redux'
 
+import contentSlice from './features/contentSlice/contentSlice'
+
 export const store = configureStore({
-    reducer: {}
+    reducer: {
+        content: contentSlice
+    }
 })
 
 export const useSelector: TypedUseSelectorHook<ReturnType<typeof store.getState>> = useDefaultSelector
