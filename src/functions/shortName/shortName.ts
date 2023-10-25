@@ -1,4 +1,4 @@
-const shortName = (name: string, maxLength: number): string => {
+const shortName = (name: string = '', maxLength: number): string => {
     if (name.length <= maxLength) return name
 
     let newName = name.substring(0, maxLength - 3)
