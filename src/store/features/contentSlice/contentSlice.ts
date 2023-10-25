@@ -6,9 +6,12 @@ export const contentSlice = createSlice({
     name: 'contentSlice',
     initialState,
     reducers: {
-        setCurrentToPath: (state, action: PayloadAction<string[]>) => {
-            state.currentFolder = getContentByPath(state.content, action.payload)
+        setPath: (state, action: PayloadAction<string[]>) => {
             state.currentPath = action.payload
+        },
+
+        setCurrentToPath: (state) => {
+            state.currentFolder = getContentByPath(state.content, state.currentPath)
         }
     }
 })
