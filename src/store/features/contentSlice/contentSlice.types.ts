@@ -1,13 +1,16 @@
 export type folderType = {
     id: number,
     name: string,
-    content: contentType
+    content: contentType,
+    star?: boolean
 }
 
 export type fileType = {
     id: number,
     name: string,
-    extension: string
+    extension: string,
+    preview?: string,
+    star?: boolean
 }
 
 export type contentType = false | {

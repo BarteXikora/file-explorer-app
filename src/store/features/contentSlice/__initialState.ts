@@ -1,5 +1,9 @@
 import { initialStateType } from './contentSlice.types'
 
+import previewImage from '../../../assets/__files/photo0.png'
+
+// currentPath: ['Prywatne', 'Obrazy', 'Wycieczka na rowery - sierpień 2023'],
+
 const initialState: initialStateType = {
     projectName: 'Moje pliki',
     currentPath: [],
@@ -9,6 +13,7 @@ const initialState: initialStateType = {
             {
                 id: 0,
                 name: 'Prywatne',
+                star: true,
                 content: {
                     folders: [
                         {
@@ -24,6 +29,7 @@ const initialState: initialStateType = {
                                                 {
                                                     id: 6,
                                                     name: 'Nieobrobione',
+                                                    star: true,
                                                     content: {}
                                                 }, {
                                                     id: 7,
@@ -36,6 +42,7 @@ const initialState: initialStateType = {
                                                     id: 100,
                                                     name: 'Wycieczka na rowery 1',
                                                     extension: 'PNG',
+                                                    preview: previewImage
                                                 }
                                             ]
                                         }

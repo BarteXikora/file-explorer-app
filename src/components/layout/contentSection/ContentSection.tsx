@@ -31,7 +31,7 @@ const ContentSection = () => {
                 <div className="content">
                     {
                         content.folders.map((folder, n) => {
-                            return <Folder key={n} name={folder.name} /*star={folder.star}*/ />
+                            return <Folder key={n} name={folder.name} star={folder.star} />
                         })
                     }
                 </div>
@@ -49,8 +49,8 @@ const ContentSection = () => {
                                 key={n}
                                 name={file.name}
                                 extension={file.extension}
-                            // preview={file.preview}
-                            // star={file.star}
+                                preview={file.preview}
+                                star={file.star}
                             />
                         })
                     }
