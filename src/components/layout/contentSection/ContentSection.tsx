@@ -6,6 +6,7 @@ import StyledContentSection from './ContentSection.styles'
 import Folder from '../../elements/folder/Folder'
 import File from '../../elements/file/File'
 import EmptyFolder from '../../elements/emptyFolder/EmptyFolder'
+import WrongPath from '../../elements/wrongPath/WrongPath'
 
 import shortName from '../../../functions/shortName/shortName'
 
@@ -59,7 +60,7 @@ const ContentSection = () => {
             </section>
         )}
 
-        {content === false && <>Nie znaleziono ścieżki</>}
+        {content === false && <WrongPath />}
 
         {
             content !== false && (
