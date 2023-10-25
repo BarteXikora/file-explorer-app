@@ -2,6 +2,7 @@ import { initialStateType } from './contentSlice.types'
 
 const initialState: initialStateType = {
     projectName: 'Moje pliki',
+    currentPath: [''],
     currentFolder: {},
     content: {
         folders: [

@@ -12,12 +12,10 @@ const getFolderByName = (content: contentType, name: string): contentType => {
     return folderFound !== false ? folderFound.content : false
 }
 
-const getContentByPath = (content: contentType, path: string): contentType | false => {
+const getContentByPath = (content: contentType, path: string[]): contentType | false => {
     if (content === false) return false
 
-    const pathSteps = path.split('/')
-
-    for (let currentStep of pathSteps) {
+    for (let currentStep of path) {
         if (currentStep !== '') content = getFolderByName(content, currentStep)
     }
 

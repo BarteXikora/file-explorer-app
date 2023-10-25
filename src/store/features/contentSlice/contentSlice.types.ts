@@ -17,6 +17,7 @@ export type contentType = false | {
 
 export type initialStateType = {
     projectName: string,
+    currentPath: string[],
     currentFolder: contentType,
     content: contentType
 }
