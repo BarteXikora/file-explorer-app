@@ -1,25 +1,4 @@
-export type folderType = {
-    id: number,
-    name: string,
-    content: contentType
-}
-
-export type fileType = {
-    id: number,
-    name: string,
-    extension: string
-}
-
-export type contentType = {
-    folders?: folderType[],
-    files?: fileType[]
-}
-
-export type initialStateType = {
-    projectName: string,
-    currentFolder: contentType,
-    content: contentType
-}
+import { initialStateType } from './contentSlice.types'
 
 const initialState: initialStateType = {
     projectName: 'Moje pliki',
