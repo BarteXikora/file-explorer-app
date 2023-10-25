@@ -9,6 +9,7 @@ import File from '../../elements/file/File'
 import shortName from '../../../functions/shortName/shortName'
 
 const ContentSection = () => {
+    const projectName = useSelector(state => state.content.projectName)
     const currentPath = useSelector(state => state.content.currentPath)
     const content = useSelector(state => state.content.currentFolder)
 
@@ -21,7 +22,7 @@ const ContentSection = () => {
 
     return <StyledContentSection>
 
-        <h1>{shortName(currentPath[currentPath.length - 1], 30)}:</h1>
+        <h1>{shortName(currentPath.length > 0 ? currentPath[currentPath.length - 1] : projectName, 35)}:</h1>
 
         {content !== false && content.folders && content.folders.length > 0 && (
             <section>
