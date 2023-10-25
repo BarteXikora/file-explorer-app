@@ -6,7 +6,7 @@ import {
 
 } from 'react-redux'
 
-import contentSlice from './features/contentSlice'
+import contentSlice from './features/contentSlice/contentSlice'
 
 export const store = configureStore({
     reducer: {
