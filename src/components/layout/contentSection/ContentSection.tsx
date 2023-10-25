@@ -5,6 +5,7 @@ import { setCurrentToPath } from '../../../store/features/contentSlice/contentSl
 import StyledContentSection from './ContentSection.styles'
 import Folder from '../../elements/folder/Folder'
 import File from '../../elements/file/File'
+import EmptyFolder from '../../elements/emptyFolder/EmptyFolder'
 
 import shortName from '../../../functions/shortName/shortName'
 
@@ -63,7 +64,7 @@ const ContentSection = () => {
         {
             content !== false && (
                 (!content.folders || content.folders.length === 0) && (!content.files || content.files.length === 0)
-            ) && <>Ten folder jest pusty</>
+            ) && <EmptyFolder />
         }
 
     </StyledContentSection>
