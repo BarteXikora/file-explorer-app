@@ -1,6 +1,6 @@
 import { useEffect } from 'react'
 import { useSelector, useDispatch } from '../../../store/store'
-import { setCurrentToPath, setPath } from '../../../store/features/contentSlice/contentSlice'
+import { setCurrentToPath } from '../../../store/features/contentSlice/contentSlice'
 
 import StyledContentSection from './ContentSection.styles'
 import FolderName from '../../elements/folderName/FolderName'
@@ -9,20 +9,17 @@ import File from '../../elements/file/File'
 import EmptyFolder from '../../elements/emptyFolder/EmptyFolder'
 import WrongPath from '../../elements/wrongPath/WrongPath'
 
-const ContentSection = () => {
-    const currentPath = useSelector(state => state.content.currentPath)
-    const content = useSelector(state => state.content.currentFolder)
+import useChangePath from '../../../functions/useChangePath/useChangePath'
 
+const ContentSection = () => {
+    const content = useSelector(state => state.content.currentFolder)
     const dispatch = useDispatch()
+    const { localPath, changePath } = useChangePath()
 
     useEffect(() => {
         dispatch(setCurrentToPath())
 
-    }, [dispatch, currentPath])
-
-    const openFolder = (folderName: string) => {
-        dispatch(setPath([...currentPath, folderName]))
-    }
+    }, [dispatch, localPath])
 
     return <StyledContentSection>
         <FolderName />
@@ -38,7 +35,7 @@ const ContentSection = () => {
                                 key={n}
                                 name={folder.name}
                                 star={folder.star}
-                                click={() => openFolder(folder.name)}
+                                click={() => changePath([...localPath, folder.name])}
                             />
                         })
                     }
