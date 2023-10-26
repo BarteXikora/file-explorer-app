@@ -2,16 +2,16 @@ import shortName from "../../../../functions/shortName/shortName"
 
 type PathPathProps = {
     path: string
-    location: string
+    click: () => void
     isLast: boolean
     maxFolderNameLength: number
 }
 
-const PathPart = ({ path, location, isLast, maxFolderNameLength }: PathPathProps) => {
+const PathPart = ({ path, click, isLast, maxFolderNameLength }: PathPathProps) => {
     return <>
-        <a href={location}>
+        <div className='path-part' role="button" onClick={click}>
             {shortName(path, maxFolderNameLength)}
-        </a>
+        </div>
 
         {!isLast && <span className='arrow' />}
     </>
