@@ -7,7 +7,6 @@ describe('Collapse path button component', () => {
 
     test('renders correctly', () => {
         render(<CollapsePathButton
-            content={folders}
             isPathCollapsed={false}
             maxFolderNameLength={100}
         />)
@@ -20,7 +19,6 @@ describe('Collapse path button component', () => {
 
     test('renders buttons', () => {
         render(<CollapsePathButton
-            content={folders}
             isPathCollapsed={false}
             maxFolderNameLength={100}
         />)
