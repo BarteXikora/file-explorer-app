@@ -13,29 +13,6 @@ const StyledContentTools = styled.section`
         gap: ${(props) => props.theme.margins.small};
         justify-content: space-between;
         align-items: center;
-        color: ${(props) => props.theme.colors.grayLighter};
-        white-space: nowrap;
-
-        h2 {
-            display: flex;
-            align-items: center;
-            font-size: ${(props) => props.theme.fontSizes.title};
-            margin: 0;
-            width: 400px;
-            overflow: hidden;
-        }
-
-        .button-back {
-            padding: 0 ${(props) => props.theme.margins.small} 0 0;
-
-            &:hover {
-                background-color: ${(props) => props.theme.colors.gray};
-            }
-        }
-
-        .folder-icon {
-            margin-right: ${(props) => props.theme.margins.small};
-        }
     }
 
     .separator {
