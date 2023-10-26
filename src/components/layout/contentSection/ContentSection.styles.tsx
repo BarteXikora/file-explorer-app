@@ -40,7 +40,9 @@ const StyledContentSection = styled.main`
         padding-bottom: calc(${(props) => props.theme.margins.big} * 2.5);
 
         h1 {
-            display: block;
+            display: flex;
+            align-items: center;
+            gap: ${(props) => props.theme.margins.small};
             max-width: 100%;
             overflow: hidden;
             white-space: nowrap;

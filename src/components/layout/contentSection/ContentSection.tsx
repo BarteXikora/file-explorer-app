@@ -8,6 +8,8 @@ import File from '../../elements/file/File'
 import EmptyFolder from '../../elements/emptyFolder/EmptyFolder'
 import WrongPath from '../../elements/wrongPath/WrongPath'
 
+import iconFolder from '../../../assets/icons/icon-folder-color.png'
+
 import shortName from '../../../functions/shortName/shortName'
 
 const ContentSection = () => {
@@ -23,8 +25,11 @@ const ContentSection = () => {
     }, [dispatch, currentPath])
 
     return <StyledContentSection>
+        <h1>
+            <img src={iconFolder} alt="Folder" />
 
-        <h1>{shortName(currentPath.length > 0 ? currentPath[currentPath.length - 1] : projectName, 35)}:</h1>
+            {shortName(currentPath.length > 0 ? currentPath[currentPath.length - 1] : projectName, 35)}:
+        </h1>
 
         {content !== false && content.folders && content.folders.length > 0 && (
             <section>
