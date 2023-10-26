@@ -1,3 +1,5 @@
+import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom'
+
 import { Provider } from 'react-redux'
 import { store } from './store/store'
 
@@ -16,7 +18,15 @@ const App = () => {
 
         <ScreenSize />
 
-        <MainPage />
+        <BrowserRouter>
+          <Routes>
+            <Route path='/' element={<Navigate to='/my-files' />} />
+
+            <Route path='/my-files/*' element={<MainPage />} />
+
+            <Route path='*' element={'404'} />
+          </Routes>
+        </BrowserRouter>
       </AppTheme>
     </Provider>
   )
