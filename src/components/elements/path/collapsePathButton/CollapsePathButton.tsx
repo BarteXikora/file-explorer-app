@@ -1,3 +1,6 @@
+import { useDispatch } from '../../../../store/store'
+import { setPath } from '../../../../store/features/contentSlice/contentSlice'
+
 import Dropdown from '../../../ui/dropdown/Dropdown'
 import Button from '../../../ui/button/Button'
 
@@ -11,6 +14,11 @@ type CollapsePathButtonProps = {
 }
 
 const CollapsePathButton = ({ content, isPathCollapsed, maxFolderNameLength }: CollapsePathButtonProps) => {
+    const dispatch = useDispatch()
+    const navigateToPath = (path: string[]) => {
+        dispatch(setPath(path))
+    }
+
     return <div className={`path-dropdown ${isPathCollapsed && 'collapsed'}`}>
         <Dropdown
             buttonContent='Wyświetl ścieżkę'
@@ -18,7 +26,12 @@ const CollapsePathButton = ({ content, isPathCollapsed, maxFolderNameLength }: C
             dropdownContent={<>
                 {
                     content.map((path, n) => {
-                        return <Button key={n} variant='tertiary' size='small'>
+                        return <Button
+                            key={n}
+                            variant='tertiary'
+                            size='small'
+                            onClick={() => navigateToPath(content.slice(1, n + 1))}
+                        >
                             <img src={iconFolder} alt="Folder" />
 
                             {shortName(path, maxFolderNameLength)}
