@@ -17,6 +17,9 @@ const StyledContentTools = styled.section`
         white-space: nowrap;
 
         h2 {
+            display: flex;
+            align-items: center;
+            gap: ${(props) => props.theme.margins.small};
             font-size: ${(props) => props.theme.fontSizes.title};
             margin: 0;
             width: 400px;
