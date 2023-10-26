@@ -6,7 +6,7 @@ import { store } from './store/store'
 import AppTheme from './themes/AppTheme'
 import GlobalStyles from './themes/GlobalStyles'
 
-import MainPage from './components/pages/MainPage'
+import MainPage from './components/pages/mainPage/MainPage'
 
 import ScreenSize from './components/__dev/__screenSize/ScreenSize'
 
