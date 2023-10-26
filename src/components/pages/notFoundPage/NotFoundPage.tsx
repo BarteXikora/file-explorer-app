@@ -24,7 +24,7 @@ const NotFoundPage = () => {
 
             <h1>Nie znaleziono strony!</h1>
 
-            <p>Przechodzęna stronę główną za: <b>{timeLeft !== 0 ? timeLeft : '1'} sekund.</b></p>
+            <p>Przechodzę na stronę główną za: <b>{timeLeft !== 0 ? timeLeft : '1'} sekund.</b></p>
 
             <Button onClick={() => navigate('/my-files')}>
                 <img src={iconBack} alt="Powrót" />
