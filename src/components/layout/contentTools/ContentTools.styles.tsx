@@ -19,11 +19,22 @@ const StyledContentTools = styled.section`
         h2 {
             display: flex;
             align-items: center;
-            gap: ${(props) => props.theme.margins.small};
             font-size: ${(props) => props.theme.fontSizes.title};
             margin: 0;
             width: 400px;
             overflow: hidden;
+        }
+
+        .button-back {
+            padding: 0 ${(props) => props.theme.margins.small} 0 0;
+
+            &:hover {
+                background-color: ${(props) => props.theme.colors.gray};
+            }
+        }
+
+        .folder-icon {
+            margin-right: ${(props) => props.theme.margins.small};
         }
     }
 
