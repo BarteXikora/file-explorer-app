@@ -17,4 +17,4 @@ export const contentSlice = createSlice({
 })
 
 export default contentSlice.reducer
-export const { setCurrentToPath } = contentSlice.actions
+export const { setPath, setCurrentToPath } = contentSlice.actions
