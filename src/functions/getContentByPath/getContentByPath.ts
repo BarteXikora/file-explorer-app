@@ -19,10 +19,6 @@ const getContentByPath = (content: contentType, path: string[]): contentType | f
         if (currentStep !== '') content = getFolderByName(content, currentStep)
     }
 
-    if (content !== false) {
-        for (let folder of content.folders || []) folder.content = {}
-    }
-
     return content
 }
 
