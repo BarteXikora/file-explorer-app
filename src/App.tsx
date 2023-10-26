@@ -7,6 +7,7 @@ import AppTheme from './themes/AppTheme'
 import GlobalStyles from './themes/GlobalStyles'
 
 import MainPage from './components/pages/mainPage/MainPage'
+import NotFoundPage from './components/pages/notFoundPage/NotFoundPage'
 
 import ScreenSize from './components/__dev/__screenSize/ScreenSize'
 
@@ -24,7 +25,7 @@ const App = () => {
 
             <Route path='/my-files/*' element={<MainPage />} />
 
-            <Route path='*' element={'404'} />
+            <Route path='*' element={<NotFoundPage />} />
           </Routes>
         </BrowserRouter>
       </AppTheme>
