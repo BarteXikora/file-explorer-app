@@ -7,11 +7,12 @@ import iconStar from '../../../assets/icons/icon-star-color.png'
 
 type FolderProps = {
     name: string
+    click: () => void
     star?: boolean
 }
 
-const Folder = ({ name, star }: FolderProps) => {
-    return <StyledFolder role='button'>
+const Folder = ({ name, star, click }: FolderProps) => {
+    return <StyledFolder role='button' onDoubleClick={click}>
         <img src={iconFolder} alt="Folder" />
 
         <span className="name">{name}</span>

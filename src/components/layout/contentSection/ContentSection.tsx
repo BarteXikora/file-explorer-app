@@ -1,6 +1,6 @@
 import { useEffect } from 'react'
 import { useSelector, useDispatch } from '../../../store/store'
-import { setCurrentToPath } from '../../../store/features/contentSlice/contentSlice'
+import { setCurrentToPath, setPath } from '../../../store/features/contentSlice/contentSlice'
 
 import StyledContentSection from './ContentSection.styles'
 import Folder from '../../elements/folder/Folder'
@@ -24,6 +24,10 @@ const ContentSection = () => {
 
     }, [dispatch, currentPath])
 
+    const openFolder = (folderName: string) => {
+        dispatch(setPath([...currentPath, folderName]))
+    }
+
     return <StyledContentSection>
         <h1>
             <img src={iconFolder} alt="Folder" />
@@ -38,7 +42,12 @@ const ContentSection = () => {
                 <div className="content">
                     {
                         content.folders.map((folder, n) => {
-                            return <Folder key={n} name={folder.name} star={folder.star} />
+                            return <Folder
+                                key={n}
+                                name={folder.name}
+                                star={folder.star}
+                                click={() => openFolder(folder.name)}
+                            />
                         })
                     }
                 </div>
