@@ -7,6 +7,7 @@ import Checkbox from '../../ui/checkbox/Checkbox'
 import Button from '../../ui/button/Button'
 import Dropdown from '../../ui/dropdown/Dropdown'
 
+import iconFolder from '../../../assets/icons/icon-folder-color.png'
 import iconDownload from '../../../assets/icons/icon-download.png'
 import iconMove from '../../../assets/icons/icon-move.png'
 import iconStar from '../../../assets/icons/icon-star.png'
@@ -22,7 +23,11 @@ const ContentTools = () => {
 
     return <StyledContentTools className={areToolsShown ? 'section-shown' : ''}>
         <div className="folder-name">
-            <h2>{shortName(currentPath.length > 0 ? currentPath[currentPath.length - 1] : projectName, 35)}:</h2>
+            <h2>
+                <img src={iconFolder} alt="Folder" />
+
+                {shortName(currentPath.length > 0 ? currentPath[currentPath.length - 1] : projectName, 35)}:
+            </h2>
 
             <div className="separator"></div>
         </div>
