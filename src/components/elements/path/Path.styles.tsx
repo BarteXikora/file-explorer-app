@@ -56,7 +56,7 @@ const StyledPath = styled.div`
         }
     }
 
-    a {
+    .path-part {
         display: inline-block;
         color: ${(props) => props.theme.colors.white};
         text-decoration: none;
@@ -64,6 +64,7 @@ const StyledPath = styled.div`
         max-width: 20%;
         white-space: nowrap;
         overflow: hidden;
+        cursor: pointer;
 
         &:hover {
             color: ${(props) => props.theme.colors.primaryLighter};

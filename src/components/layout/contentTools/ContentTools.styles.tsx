@@ -13,18 +13,6 @@ const StyledContentTools = styled.section`
         gap: ${(props) => props.theme.margins.small};
         justify-content: space-between;
         align-items: center;
-        color: ${(props) => props.theme.colors.grayLighter};
-        white-space: nowrap;
-
-        h2 {
-            display: flex;
-            align-items: center;
-            gap: ${(props) => props.theme.margins.small};
-            font-size: ${(props) => props.theme.fontSizes.title};
-            margin: 0;
-            width: 400px;
-            overflow: hidden;
-        }
     }
 
     .separator {

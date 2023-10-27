@@ -36,19 +36,14 @@ const StyledContentSection = styled.main`
 
     @media (max-width: ${(props) => props.theme.screenSizes.small}) {
         padding: ${(props) => props.theme.margins.sectionBigMobile};
-        padding-top: calc(${(props) => props.theme.margins.medium} + 140px);
+        padding-top: calc(${(props) => props.theme.margins.medium} + 125px);
         padding-bottom: calc(${(props) => props.theme.margins.big} * 2.5);
 
         h1 {
             display: flex;
-            align-items: center;
-            gap: ${(props) => props.theme.margins.small};
-            max-width: 100%;
-            overflow: hidden;
-            white-space: nowrap;
-            font-size: ${(props) => props.theme.fontSizes.title};
-            color: ${(props) => props.theme.colors.grayLighter};
-            margin-top: ${(props) => props.theme.margins.medium};
+            box-sizing: border-box;
+            width: 100%;
+            margin-bottom: ${(props) => props.theme.margins.medium};
         }
 
         .content {

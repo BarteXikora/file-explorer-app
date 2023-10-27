@@ -3,33 +3,26 @@ import { useSelector, useDispatch } from '../../../store/store'
 import { setCurrentToPath } from '../../../store/features/contentSlice/contentSlice'
 
 import StyledContentSection from './ContentSection.styles'
+import FolderName from '../../elements/folderName/FolderName'
 import Folder from '../../elements/folder/Folder'
 import File from '../../elements/file/File'
 import EmptyFolder from '../../elements/emptyFolder/EmptyFolder'
 import WrongPath from '../../elements/wrongPath/WrongPath'
 
-import iconFolder from '../../../assets/icons/icon-folder-color.png'
-
-import shortName from '../../../functions/shortName/shortName'
+import useChangePath from '../../../functions/useChangePath/useChangePath'
 
 const ContentSection = () => {
-    const projectName = useSelector(state => state.content.projectName)
-    const currentPath = useSelector(state => state.content.currentPath)
     const content = useSelector(state => state.content.currentFolder)
-
     const dispatch = useDispatch()
+    const { localPath, changePath } = useChangePath()
 
     useEffect(() => {
         dispatch(setCurrentToPath())
 
-    }, [dispatch, currentPath])
+    }, [dispatch, localPath])
 
     return <StyledContentSection>
-        <h1>
-            <img src={iconFolder} alt="Folder" />
-
-            {shortName(currentPath.length > 0 ? currentPath[currentPath.length - 1] : projectName, 35)}:
-        </h1>
+        <FolderName />
 
         {content !== false && content.folders && content.folders.length > 0 && (
             <section>
@@ -38,7 +31,12 @@ const ContentSection = () => {
                 <div className="content">
                     {
                         content.folders.map((folder, n) => {
-                            return <Folder key={n} name={folder.name} star={folder.star} />
+                            return <Folder
+                                key={n}
+                                name={folder.name}
+                                star={folder.star}
+                                click={() => changePath([...localPath, folder.name])}
+                            />
                         })
                     }
                 </div>

@@ -5,13 +5,20 @@ import iconFolder from '../../../assets/icons/icon-folder.png'
 import iconMenu from '../../../assets/icons/icon-menu-dots.png'
 import iconStar from '../../../assets/icons/icon-star-color.png'
 
+import useTouchEvents from '../../../functions/useTouchEvents/useTouchEvents'
+
 type FolderProps = {
     name: string
+    click: () => void
     star?: boolean
 }
 
-const Folder = ({ name, star }: FolderProps) => {
-    return <StyledFolder role='button'>
+const Folder = ({ name, star, click }: FolderProps) => {
+    const events = useTouchEvents({
+        onTouch: click
+    })
+
+    return <StyledFolder role='button' onDoubleClick={click} {...events} >
         <img src={iconFolder} alt="Folder" />
 
         <span className="name">{name}</span>

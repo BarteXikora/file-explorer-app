@@ -8,7 +8,7 @@ describe('Path part component', () => {
     test('renders correctly', () => {
         render(<PathPart
             path='test path'
-            location='test location'
+            click={() => { }}
             isLast={false}
             maxFolderNameLength={100}
         />)
@@ -23,7 +23,7 @@ describe('Path part component', () => {
     test('uses max name length correctly', () => {
         render(<PathPart
             path='test path'
-            location='test location'
+            click={() => { }}
             isLast={false}
             maxFolderNameLength={5}
         />)

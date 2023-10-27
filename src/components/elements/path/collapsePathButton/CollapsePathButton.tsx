@@ -1,24 +1,32 @@
 import Dropdown from '../../../ui/dropdown/Dropdown'
 import Button from '../../../ui/button/Button'
 
-import shortName from '../../../../functions/shortName/shortName'
 import iconFolder from '../../../../assets/icons/icon-folder.png'
 
+import shortName from '../../../../functions/shortName/shortName'
+import useChangePath from '../../../../functions/useChangePath/useChangePath'
+
 type CollapsePathButtonProps = {
-    content: string[]
     isPathCollapsed: boolean
     maxFolderNameLength: number
 }
 
-const CollapsePathButton = ({ content, isPathCollapsed, maxFolderNameLength }: CollapsePathButtonProps) => {
+const CollapsePathButton = ({ isPathCollapsed, maxFolderNameLength }: CollapsePathButtonProps) => {
+    const { fullPath, changePath } = useChangePath()
+
     return <div className={`path-dropdown ${isPathCollapsed && 'collapsed'}`}>
         <Dropdown
             buttonContent='Wyświetl ścieżkę'
             buttonOptions={{ size: 'small' }}
             dropdownContent={<>
                 {
-                    content.map((path, n) => {
-                        return <Button key={n} variant='tertiary' size='small'>
+                    fullPath.map((path, n) => {
+                        return <Button
+                            key={n}
+                            variant='tertiary'
+                            size='small'
+                            onClick={() => changePath(fullPath.slice(1, n + 1))}
+                        >
                             <img src={iconFolder} alt="Folder" />
 
                             {shortName(path, maxFolderNameLength)}
